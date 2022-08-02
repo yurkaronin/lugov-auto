@@ -1,0 +1,25 @@
+@import "parts/fonts";
+
+// support
+@import "support/list-reset";
+@import "support/visually-hidden";
+@import "support/animation";
+
+// blocks
+@import "parts/variables";
+@import "parts/global";
+
+@import "parts/title";
+@import "parts/wrapper";
+
+@import "parts/button";
+
+
+// sections
+@import "sections/header";
+
+@import "sections/footer";
+
+// custom
+@import "custom/custom";
+
