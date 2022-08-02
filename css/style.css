@@ -168,22 +168,26 @@ button {
   }
 }
 .wrapper {
-  max-width: 1584px;
-  padding: 0 40px;
+  max-width: 1600px;
+  padding: 0 48px;
   margin: 0 auto;
 }
-
-@media (max-width: 650px) {
+@media (max-width: 1024px) {
   .wrapper {
     max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 375px) {
+  .wrapper {
     padding: 0 20px;
   }
 }
-@media (max-width: 370px) {
-  .wrapper {
-    padding: 0 10px;
-  }
-}
+
 .button {
   display: inline-block;
   background-color: var(--col7);
@@ -321,4 +325,11 @@ button {
 .button--custom-prev:hover .progress-circle__indicator, .button--custom-prev:focus .progress-circle__indicator {
   stroke: var(--col5) !important;
   stroke-dashoffset: 0;
+}
+
+.header {
+  background-color: var(--col--black);
+  color: var(--col--wh);
+  padding-top: 16px;
+  padding-bottom: 14px;
 }/*# sourceMappingURL=style.css.map */
