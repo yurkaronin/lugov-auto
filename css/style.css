@@ -94,9 +94,12 @@ input[type=radio].visually-hidden {
   }
 }
 :root {
-  --ff1: "Inter", sans-serif;
-  --col1: #25272d;
-  --col2: #ffffff;
+  --ff-1: "Inter", sans-serif;
+  --col-bg: #121212;
+  --col-text: rgba(255, 255, 255, 1);
+  --col-accent: #00A5FF;
+  --col--wh: #FFFFFF;
+  --col--black: #000000;
 }
 
 html {
@@ -111,14 +114,15 @@ html *::after {
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 375px;
   font-style: normal;
   overflow-x: hidden;
-  font-family: "Inter";
+  font-family: var(--ff-1);
   font-weight: 400;
-  font-size: 18px;
-  line-height: 1.4;
-  color: var(--col1);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--col-text);
+  background-color: var(--col-bg);
   position: relative;
 }
 

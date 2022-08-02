@@ -12,14 +12,15 @@ html {
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 375px;
   font-style: normal;
   overflow-x: hidden;
-  font-family: 'Inter';
+  font-family: var(--ff-1);
   font-weight: 400;
-  font-size: 18px;
-  line-height: 1.4;
-  color: var(--col1);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--col-text);
+  background-color: var(--col-bg);
   position: relative;
 }
 
