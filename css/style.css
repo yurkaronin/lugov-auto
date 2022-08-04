@@ -98,6 +98,7 @@ input[type=radio].visually-hidden {
   --col-bg: #121212;
   --col-text: rgba(255, 255, 255, 1);
   --col-accent: #00A5FF;
+  --col-accent-2: #004B88;
   --col--wh: #FFFFFF;
   --col--black: #000000;
 }
@@ -337,7 +338,8 @@ button {
   gap: 27px;
 }
 .header__logo {
-  max-width: 144px;
+  width: 144px;
+  flex-shrink: 0;
 }
 .header__logo img {
   display: block;
@@ -347,7 +349,6 @@ button {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-wrap: wrap;
 }
 .header__nav-link {
   font-family: inherit;
@@ -367,7 +368,7 @@ button {
 .header__nav-link:after {
   content: "";
   display: block;
-  height: 48%;
+  height: 33%;
   width: 1px;
   background-color: var(--col--wh);
   opacity: 0.2;
@@ -378,16 +379,11 @@ button {
   color: var(--col-accent);
 }
 .header__nav-link:hover {
-  background-color: var(--col-accent);
+  background-color: var(--col-accent-2);
   color: var(--col--wh);
 }
 .header__nav-link:hover::after {
   display: none;
-}
-.header__nav-item {
-  /* &:first-child a {
-    padding-left: 0;
-  } */
 }
 .header__nav-item:last-child a::after {
   display: none;
@@ -419,4 +415,57 @@ button {
 }
 .header__filter-btn {
   display: none;
+}
+@media (max-width: 960px) {
+  .header__logo {
+    margin-right: 33px;
+  }
+  .header__nav-link {
+    height: 72px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header__tel {
+    width: 72px;
+    height: 72px;
+    justify-content: center;
+    border-right: 1px solid;
+    border-color: var(--col-bg);
+  }
+  .header__tel span {
+    display: none;
+  }
+  .header__tel svg {
+    width: 23px;
+  }
+  .header__buttons {
+    max-width: initial;
+    display: flex;
+  }
+  .header__filter-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 72px;
+    height: 72px;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-color: var(--col-bg);
+  }
+  .header__filter-btn svg {
+    pointer-events: none;
+    position: absolute;
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  .header__filter-btn .cross {
+    opacity: 0;
+  }
+  .header__container {
+    gap: 0;
+  }
+  .header__nav-item {
+    max-width: 30%;
+  }
 }/*# sourceMappingURL=style.css.map */
