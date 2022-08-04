@@ -1,13 +1,13 @@
 .header {
   background-color: var(--col--black);
   color: var(--col--wh);
-  padding-top: 16px;
-  padding-bottom: 14px;
+  // padding-top: 16px;
+  // padding-bottom: 14px;
 
   &__container {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 27px;
   }
 
   &__logo {
@@ -20,45 +20,12 @@
 
   &__desktop-nav {}
 
-  &__nav-item {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 2px 23px;
-
-    &:after {
-      content: "";
-      display: block;
-      height: 100%;
-      width: 1px;
-      background-color: var(--col--wh);
-      opacity: 0.2;
-      position: absolute;
-      right: 0;
-    }
-
-    &:last-child {
-      padding-right: 0;
-
-      &::after {
-        display: none;
-      }
-    }
-
-    &:first-child {
-      padding-left: 0;
-    }
-  }
-
   &__nav-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-
-
-
   }
 
   &__nav-link {
@@ -71,15 +38,58 @@
     text-decoration: none;
     transition: all 0.3s;
     letter-spacing: 0.05em;
+    padding: 26px 23px;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:after {
+      content: "";
+      display: block;
+      height: 48%;
+      width: 1px;
+      background-color: var(--col--wh);
+      opacity: 0.2;
+      position: absolute;
+      right: 0;
+    }
+
 
     &--active {
       color: var(--col-accent);
     }
+
+    &:hover {
+      background-color: var(--col-accent);
+      color: var(--col--wh);
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__nav-item {
+    &:last-child a {
+      // padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    /* &:first-child a {
+      padding-left: 0;
+    } */
+
+
   }
 
   &__buttons {
     margin-left: auto;
     max-width: 176px;
+
     a {
       text-decoration: none;
     }
@@ -106,6 +116,7 @@
   &__menu-btn {
     display: none;
   }
+
   &__filter-btn {
     display: none;
   }
