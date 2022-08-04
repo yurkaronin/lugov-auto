@@ -19,8 +19,6 @@
     }
   }
 
-  &__desktop-nav {}
-
   &__nav-list {
     list-style: none;
     padding: 0;
@@ -44,6 +42,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    z-index: 2;
 
     &:after {
       content: "";
@@ -53,7 +52,8 @@
       background-color: var(--col--wh);
       opacity: 0.2;
       position: absolute;
-      right: 0;
+      right: -2px;
+      z-index: 0;
     }
 
 
@@ -91,7 +91,12 @@
     }
   }
 
-  &__tel {
+  &__btn {
+    background-color: transparent;
+    border: none;
+  }
+
+  &__btn--tel {
     font-family: inherit;
     font-weight: 700;
     font-size: 14px;
@@ -109,11 +114,11 @@
     }
   }
 
-  &__menu-btn {
+  &__btn--menu {
     display: none;
   }
 
-  &__filter-btn {
+  &__btn--filter {
     display: none;
   }
 
@@ -121,21 +126,24 @@
     &__logo {
       margin-right: 33px;
     }
+
     &__nav-link {
       height: 72px;
       padding-left: 16px;
       padding-right: 16px;
     }
 
-    &__tel {
+    &__btn--tel {
       width: 72px;
       height: 72px;
       justify-content: center;
       border-right: 1px solid;
       border-color: var(--col-bg);
+
       span {
         display: none;
       }
+
       svg {
         width: 23px;
       }
@@ -146,16 +154,10 @@
       display: flex;
     }
 
-    &__filter-btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
+    &__btn {
       width: 72px;
       height: 72px;
-      border-right: 1px solid;
-      border-left: 1px solid;
-      border-color: var(--col-bg);
+      transition: all 0.3s;
 
       svg {
         pointer-events: none;
@@ -167,21 +169,60 @@
       .cross {
         opacity: 0;
       }
+
+      &:hover {
+        background-color: var(--col-accent);
+
+        svg path {
+          fill: var(--col--wh);
+        }
+      }
+    }
+
+    &__btn--filter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      border-right: 1px solid;
+      border-left: 1px solid;
+      border-color: var(--col-bg);
+
     }
 
     &__container {
       gap: 0;
     }
+
     &__nav-item {
       max-width: 30%;
     }
-    &__nav-link {
-      // text-align: center;
-      // justify-content: center;
+
+  }
+
+  @media (max-width: 750px) {
+
+    &__logo {
+      width: 120px;
+    }
+
+    &__desktop-nav {
+      display: none;
+    }
+
+    &__btn {
+      border: none;
+      position: relative;
+      height: 60px;
+      width: 66px;
+    }
+
+    &__btn--menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 
 
 }
-
-
