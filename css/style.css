@@ -332,4 +332,89 @@ button {
   color: var(--col--wh);
   padding-top: 16px;
   padding-bottom: 14px;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.header__logo {
+  max-width: 144px;
+}
+.header__logo img {
+  display: block;
+}
+.header__nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 2px 23px;
+}
+.header__nav-item:after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 1px;
+  background-color: var(--col--wh);
+  opacity: 0.2;
+  position: absolute;
+  right: 0;
+}
+.header__nav-item:last-child {
+  padding-right: 0;
+}
+.header__nav-item:last-child::after {
+  display: none;
+}
+.header__nav-item:first-child {
+  padding-left: 0;
+}
+.header__nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header__nav-link {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.43;
+  text-transform: uppercase;
+  color: var(--col--wh);
+  text-decoration: none;
+  transition: all 0.3s;
+  letter-spacing: 0.05em;
+}
+.header__nav-link--active {
+  color: var(--col-accent);
+}
+.header__buttons {
+  margin-left: auto;
+  max-width: 176px;
+}
+.header__buttons a {
+  text-decoration: none;
+}
+.header__tel {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.43;
+  color: var(--col--wh);
+  text-decoration: none;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header__tel svg {
+  width: 16px;
+}
+.header__menu-btn {
+  display: none;
+}
+.header__filter-btn {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
