@@ -1,0 +1,32 @@
+.mobile-menu {
+  display: none;
+
+  @media (max-width: 750px) {
+    &--filter {
+      display: block;
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &__link {
+      text-decoration: none;
+      color: var(--col--wh);
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+      padding: 20px;
+      display: flex;
+      min-height: 55px;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--col-accent);
+    }
+
+  }
+}
