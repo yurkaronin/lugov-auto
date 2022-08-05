@@ -38,6 +38,15 @@
     display: flex;
     align-items: center;
   }
+  &__buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    .button {
+      width: 100%;
+    }
+  }
 
 }
 

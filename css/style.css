@@ -193,6 +193,14 @@ button {
   display: flex;
   align-items: center;
 }
+.custom-filter__buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.custom-filter__buttons .button {
+  width: 100%;
+}
 
 input[type=checkbox] + label::before {
   position: absolute;
@@ -255,14 +263,13 @@ input[type=checkbox]:checked + label::before {
 
 .button {
   display: inline-block;
-  background-color: var(--col7);
-  color: var(--col3);
+  color: var(--col--wh);
   text-decoration: none;
   cursor: pointer;
   border: none;
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
   padding: 14px;
   height: 48px;
@@ -270,126 +277,17 @@ input[type=checkbox]:checked + label::before {
   width: -moz-max-content;
   width: max-content;
   transition: 0.3s;
+  text-transform: uppercase;
+  background-color: var(--col-accent);
+  border-radius: 4px;
 }
-
-.button--icon {
-  width: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.button--white {
+  background-color: var(--col--wh);
+  color: var(--col--black);
 }
-.button--icon svg {
-  position: absolute;
-  pointer-events: none;
-}
-
-.button--decorate {
-  justify-content: space-between;
-  gap: 16px;
-  align-items: center;
-  display: flex;
-  padding-left: 17px;
-}
-
-.button--nav {
-  background-color: var(--col4);
-  height: 48px;
-  width: 48px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-  color: var(--col2);
-}
-.button--nav span {
-  display: block;
-  position: relative;
-  background: var(--col2);
-  width: 100%;
-  height: 2px;
-  transition: 0.3s;
-  pointer-events: none;
-}
-.button--nav span::after, .button--nav span::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background: var(--col2);
-  width: 75%;
-  height: 2px;
-  transition: 0.4s;
-}
-.button--nav span::before {
-  top: -8px;
-  width: 65%;
-}
-.button--nav span::after {
-  top: 8px;
-}
-
-.button:hover,
-.button:focus {
-  background-color: var(--col4);
-  color: var(--col2);
-}
-.button:hover svg path,
-.button:focus svg path {
-  stroke: var(--col2);
-}
-
-@media (max-width: 650px) {
-  .button {
-    font-size: 14px;
-  }
-}
-@media (max-width: 425px) {
-  .button {
-    height: 40px;
-  }
-  .button--icon {
-    width: 40px;
-  }
-  .button--nav {
-    height: 40px;
-    width: 40px;
-    padding: 12px 8px;
-  }
-}
-.button--custom {
-  position: relative;
-  pointer-events: initial;
-  background-color: transparent;
-  width: 80px;
-  height: 80px;
-  color: var(--col2);
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.button--custom span {
-  position: absolute;
-  left: -75px;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 1;
-  padding: 5px;
-  z-index: 2;
-}
-.button--custom .button__arrow {
-  position: absolute;
-  pointer-events: none;
-  right: 30px;
-}
-.button--custom .button__arrow path {
-  stroke: transparent !important;
-  fill: var(--col2) !important;
-}
-
-.button--custom-prev:hover .progress-circle__indicator, .button--custom-prev:focus .progress-circle__indicator {
-  stroke: var(--col5) !important;
-  stroke-dashoffset: 0;
+.button:hover {
+  background-color: var(--col-accent-2);
+  color: var(--col--wh);
 }
 
 .footer-menu {
