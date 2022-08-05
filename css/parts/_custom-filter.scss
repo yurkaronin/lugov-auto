@@ -1,11 +1,13 @@
 .custom-filter {
   padding-top: 13px;
+
   &__group {
     padding: 0;
     margin: 0;
     border: none;
     margin-bottom: 26px;
   }
+
   &__name {
     font-family: inherit;
     font-weight: 700;
@@ -14,10 +16,7 @@
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 14px;
-
-    /* White */
-
-    color: #FFFFFF;
+    color: var(--col--wh);
   }
 
   &__flex {
@@ -26,7 +25,7 @@
     gap: 12px;
   }
 
-  &__itel-label {
+  &__label {
     font-family: inherit;
     font-style: normal;
     font-weight: 400;
@@ -38,6 +37,25 @@
     display: flex;
     align-items: center;
   }
+
+  &__range {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__input {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--col--gray-2);
+    height: 48px;
+    background-color: var(--col--wh);
+    border: none;
+    width: calc(50% - 8px);
+    padding: 16px;
+    border-radius: 4px;
+  }
+
   &__buttons {
     display: flex;
     gap: 16px;
