@@ -1,4 +1,5 @@
 .custom-filter {
+  padding-top: 13px;
   &__group {
     padding: 0;
     margin: 0;
@@ -12,7 +13,7 @@
     line-height: 1.7;
     text-transform: uppercase;
     margin: 0;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 
     /* White */
 
@@ -22,7 +23,7 @@
   &__flex {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
   }
 
   &__itel-label {
@@ -34,6 +35,8 @@
     color: var(--col--gray-2);
     position: relative;
     padding-left: 40px;
+    display: flex;
+    align-items: center;
   }
 
 }
