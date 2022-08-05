@@ -10,6 +10,8 @@
 @import "parts/variables";
 @import "parts/global";
 @import "parts/body-flex";
+@import "parts/custom-filter";
+
 
 
 @import "parts/title";
@@ -21,6 +23,8 @@
 // sections
 @import "sections/header";
 @import "sections/mobile-menu";
+@import "sections/main";
+
 
 @import "sections/footer";
 

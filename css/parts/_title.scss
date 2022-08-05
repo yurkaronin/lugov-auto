@@ -1,11 +1,10 @@
 .title {
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin: 0;
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
   line-height: 1.2;
-  color: var(--col2);
+  color: var(--col--wh);
+  font-size: 40px;
 }
 
 @media (max-width: 1024px) {
