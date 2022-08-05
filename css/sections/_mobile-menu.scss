@@ -2,9 +2,6 @@
   display: none;
 
   @media (max-width: 750px) {
-    &--filter {
-      display: block;
-    }
 
     &__list {
       list-style: none;
@@ -25,8 +22,42 @@
       width: 100%;
       align-items: center;
       justify-content: space-between;
-      background-color: var(--col-accent);
+      background-color: var(--col-bg);
+      border-top: 1px solid;
+      border-color: var(--col--gray);
+
+      svg {
+        transition: all 0.3s;
+      }
+
+      &:hover,
+      &:focus {
+        color: var(--col--wh);
+        background-color: var(--col-accent);
+        border-color: transparent;
+
+        svg {
+          transform: rotate(90deg);
+          transform-origin: center center;
+          path {
+          stroke: var(--col--wh);
+          }
+        }
+      }
+    }
+
+    &--filter {
+      display: block;
+
+      .mobile-menu__link {
+        color: var(--col--wh);
+        background-color: var(--col-accent);
+        border: none;
+
+      }
     }
 
   }
+
+
 }

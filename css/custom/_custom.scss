@@ -1,0 +1,20 @@
+// показ мобильного меню
+.js-mob-menu-show {
+  .mobile-menu--nav {
+    display: block;
+  }
+
+  .js-menu-btn {
+    svg {
+      opacity: 0;
+    }
+    .cross {
+      opacity: 1;
+    }
+  }
+}
+
+// показ мобильного фильтра
+.js-mob-filter-show {
+
+}

@@ -101,6 +101,7 @@ input[type=radio].visually-hidden {
   --col-accent-2: #004B88;
   --col--wh: #FFFFFF;
   --col--black: #000000;
+  --col--gray: #333333;
 }
 
 html {
@@ -511,9 +512,6 @@ button {
   display: none;
 }
 @media (max-width: 750px) {
-  .mobile-menu--filter {
-    display: block;
-  }
   .mobile-menu__list {
     list-style: none;
     padding: 0;
@@ -532,6 +530,41 @@ button {
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--col-accent);
+    background-color: var(--col-bg);
+    border-top: 1px solid;
+    border-color: var(--col--gray);
   }
+  .mobile-menu__link svg {
+    transition: all 0.3s;
+  }
+  .mobile-menu__link:hover, .mobile-menu__link:focus {
+    color: var(--col--wh);
+    background-color: var(--col-accent);
+    border-color: transparent;
+  }
+  .mobile-menu__link:hover svg, .mobile-menu__link:focus svg {
+    transform: rotate(90deg);
+    transform-origin: center center;
+  }
+  .mobile-menu__link:hover svg path, .mobile-menu__link:focus svg path {
+    stroke: var(--col--wh);
+  }
+  .mobile-menu--filter {
+    display: block;
+  }
+  .mobile-menu--filter .mobile-menu__link {
+    color: var(--col--wh);
+    background-color: var(--col-accent);
+    border: none;
+  }
+}
+
+.js-mob-menu-show .mobile-menu--nav {
+  display: block;
+}
+.js-mob-menu-show .js-menu-btn svg {
+  opacity: 0;
+}
+.js-mob-menu-show .js-menu-btn .cross {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
