@@ -557,6 +557,12 @@ button {
     background-color: var(--col-accent);
     border: none;
   }
+  .mobile-menu--filter .mobile-menu__link:hover svg, .mobile-menu--filter .mobile-menu__link:focus svg {
+    transform: none;
+  }
+  .mobile-menu--filter .mobile-menu__link:hover path, .mobile-menu--filter .mobile-menu__link:focus path {
+    stroke: none;
+  }
 }
 
 .js-mob-menu-show .mobile-menu--nav {

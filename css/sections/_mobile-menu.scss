@@ -54,6 +54,16 @@
         background-color: var(--col-accent);
         border: none;
 
+        &:hover,
+        &:focus {
+          svg {
+            transform: none;
+          }
+          path {
+            stroke: none;
+            }
+        }
+
       }
     }
 
