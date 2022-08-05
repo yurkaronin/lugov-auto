@@ -8,8 +8,9 @@
     align-items: center;
     border-top: 1px solid;
     border-color: var(--col--gray);
-    gap: 32px;
+    gap: 6px 32px;
     padding: 31px 0 30px;
+    flex-wrap: wrap;
   }
 
   &__copyright {
@@ -23,6 +24,7 @@
     margin: 0;
     margin-left: auto;
     font-size: 14px;
+
     a {
       color: var(--col-accent);
       text-decoration: none;
@@ -49,6 +51,38 @@
           background-color: var(--col-accent-2);
         }
       }
+    }
+  }
+
+  @media (max-width: 1150px) {
+    &__menu {
+      margin-left: auto;
+    }
+
+    &__developer-link {
+      width: 100%;
+      max-width: 100%;
+      margin-left: initial;
+    }
+  }
+
+  @media (max-width: 960px) {
+    &__container {
+      gap: 20px;
+    }
+    &__menu {
+      width: 100%;
+      max-width: 100%;
+      margin-left: initial;
+    }
+  }
+
+  @media (max-width: 750px) {
+    &__container {
+      gap: 23px;
+    }
+    &__container {
+      padding: 23px 0 32px;
     }
   }
 }

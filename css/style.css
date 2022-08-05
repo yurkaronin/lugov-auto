@@ -612,8 +612,9 @@ button {
   align-items: center;
   border-top: 1px solid;
   border-color: var(--col--gray);
-  gap: 32px;
+  gap: 6px 32px;
   padding: 31px 0 30px;
+  flex-wrap: wrap;
 }
 .footer__copyright {
   margin: 0;
@@ -648,6 +649,34 @@ button {
 }
 .footer__developer-link a:hover:after {
   background-color: var(--col-accent-2);
+}
+@media (max-width: 1150px) {
+  .footer__menu {
+    margin-left: auto;
+  }
+  .footer__developer-link {
+    width: 100%;
+    max-width: 100%;
+    margin-left: initial;
+  }
+}
+@media (max-width: 960px) {
+  .footer__container {
+    gap: 20px;
+  }
+  .footer__menu {
+    width: 100%;
+    max-width: 100%;
+    margin-left: initial;
+  }
+}
+@media (max-width: 750px) {
+  .footer__container {
+    gap: 23px;
+  }
+  .footer__container {
+    padding: 23px 0 32px;
+  }
 }
 
 .js-mob-menu-show .mobile-menu--nav {
