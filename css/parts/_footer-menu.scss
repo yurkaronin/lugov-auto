@@ -1,0 +1,30 @@
+.footer-menu {
+  max-width: max-content;
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 23px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--col--wh);
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 700;
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--col-accent);
+    }
+  }
+}

@@ -149,6 +149,12 @@ button {
   outline-color: none !important;
 }
 
+.body-flex {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .title {
   margin-top: 0;
   margin-bottom: 20px;
@@ -327,6 +333,37 @@ button {
 .button--custom-prev:hover .progress-circle__indicator, .button--custom-prev:focus .progress-circle__indicator {
   stroke: var(--col5) !important;
   stroke-dashoffset: 0;
+}
+
+.footer-menu {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.footer-menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 23px;
+}
+.footer-menu__link {
+  text-decoration: none;
+  color: var(--col--wh);
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+.footer-menu__link:hover {
+  color: var(--col-accent);
 }
 
 .header {
@@ -563,6 +600,52 @@ button {
   .mobile-menu--filter .mobile-menu__link:hover path, .mobile-menu--filter .mobile-menu__link:focus path {
     stroke: none;
   }
+}
+
+.footer {
+  margin-top: auto;
+  background-color: var(--col-bg);
+  color: var(--col-text);
+}
+.footer__container {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid;
+  border-color: var(--col--gray);
+  gap: 32px;
+  padding: 22px 0 30px;
+}
+.footer__copyright {
+  margin: 0;
+  max-width: 352px;
+  font-size: 14px;
+}
+.footer__developer-link {
+  margin: 0;
+  margin-left: auto;
+}
+.footer__developer-link a {
+  color: var(--col-accent);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s;
+}
+.footer__developer-link a:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--col-accent);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+.footer__developer-link a:hover {
+  color: var(--col-accent-2);
+}
+.footer__developer-link a:hover:after {
+  background-color: var(--col-accent-2);
 }
 
 .js-mob-menu-show .mobile-menu--nav {

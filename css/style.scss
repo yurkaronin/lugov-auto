@@ -5,15 +5,18 @@
 @import "support/visually-hidden";
 @import "support/animation";
 
+
 // blocks
 @import "parts/variables";
 @import "parts/global";
+@import "parts/body-flex";
+
 
 @import "parts/title";
 @import "parts/wrapper";
 
 @import "parts/button";
-
+@import "parts/footer-menu";
 
 // sections
 @import "sections/header";
