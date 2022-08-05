@@ -16,5 +16,10 @@
 
 // показ мобильного фильтра
 .js-mob-filter-show {
-
+  .custom-filter--mob {
+    display: block;
+    min-height: calc(100vh - 72px);
+    border-top: 1px solid;
+    border-color: var(--col-bg);
+  }
 }

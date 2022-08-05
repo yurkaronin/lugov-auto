@@ -1,21 +1,32 @@
 .main {
   padding: 32px 0 64px;
-&__flex {
-  display: flex;
-  gap: 32px;
-}
-&__filter {
-  width: 352px;
-  flex-shrink: 0;
-}
-&__content {
-  flex-grow: 2;
-}
-&__title {
-  border-bottom: 1px solid;
-  border-color: var(--col--gray);
-  .title {
-    margin-bottom: 23px;
+
+  &__flex {
+    display: flex;
+    gap: 32px;
   }
-}
+
+  &__filter {
+    width: 352px;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    flex-grow: 2;
+  }
+
+  &__title {
+    border-bottom: 1px solid;
+    border-color: var(--col--gray);
+
+    .title {
+      margin-bottom: 23px;
+    }
+  }
+
+  @media (max-width: 960px) {
+    &__filter {
+      display: none;
+    }
+  }
 }

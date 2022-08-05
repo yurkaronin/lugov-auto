@@ -1,6 +1,10 @@
 .custom-filter {
   padding-top: 13px;
 
+  &--mob {
+    display: none;
+  }
+
   &__group {
     padding: 0;
     margin: 0;
@@ -72,6 +76,41 @@
     .button {
       width: 100%;
     }
+  }
+
+  @media (max-width: 960px) {
+    &--mob {
+      padding: 40px;
+    }
+    &__flex {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    &__label {
+      width: calc((100% / 3) - 8px);
+    }
+    &__buttons {
+      gap: 32px;
+      .button {
+        width: calc(50% - 16px);
+      }
+    }
+    &__range {
+      gap: 32px;
+    }
+    &__input {
+      width: 208px;
+    }
+    &__group {
+      margin-bottom: 34px;
+    }
+  }
+
+  @media (max-width: 750px) {
+    &--mob {
+      padding: 20px;
+    }
+
   }
 
 }

@@ -1,6 +1,22 @@
 .mobile-menu {
   display: none;
 
+  &--filter {
+    display: none;
+    .custom-filter {
+      display: none;
+    }
+  }
+
+  @media (max-width: 960px) {
+    .custom-filter--mob {
+      padding: 20px;
+      width: 100%;
+    }
+  }
+
+
+
   @media (max-width: 750px) {
 
     &__list {
@@ -65,6 +81,7 @@
         }
 
       }
+
     }
 
   }
