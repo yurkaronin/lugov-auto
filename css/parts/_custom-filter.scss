@@ -54,6 +54,14 @@
     width: calc(50% - 8px);
     padding: 16px;
     border-radius: 4px;
+    border: 2px solid;
+    border-color: transparent;
+    transition: all 0.3s;
+    &:focus,
+    &:hover {
+      border-color: var(--col-accent);
+    }
+
   }
 
   &__buttons {
@@ -84,6 +92,17 @@ input[type=checkbox]:checked+label {
   font-weight: 600;
 }
 
+.custom-filter__label {
+  cursor: pointer;
+}
+
+.custom-filter__label:hover {
+  &::before {
+    background-image: url(../img/icons/checkbox-hover.svg);
+  }
+
+}
+
 input[type=checkbox]:checked+label::before {
-  background-image: url(../img/icons/checkbox-on.svg);
+  background-image: url(../img/icons/checkbox-on.svg) !important;
 }
