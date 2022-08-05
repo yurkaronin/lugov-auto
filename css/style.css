@@ -525,7 +525,7 @@ button {
     text-transform: uppercase;
     padding: 20px;
     display: flex;
-    min-height: 55px;
+    height: 55px;
     display: flex;
     width: 100%;
     align-items: center;
