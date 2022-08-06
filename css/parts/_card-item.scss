@@ -94,6 +94,12 @@
     text-transform: uppercase;
     height: 32px;
     padding: 10px 16px;
+    transition: all 0.3s;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: var(--col-accent-2);
+    }
   }
 
   @media (max-width: 1600px) {

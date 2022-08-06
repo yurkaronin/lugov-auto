@@ -404,6 +404,11 @@ input[type=checkbox]:checked + label::before {
   text-transform: uppercase;
   height: 32px;
   padding: 10px 16px;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+.card-item__label:hover {
+  background-color: var(--col-accent-2);
 }
 @media (max-width: 1600px) {
   .card-item__text {
