@@ -228,16 +228,19 @@ button {
 @media (max-width: 960px) {
   .custom-filter--mob {
     padding: 40px;
+    padding-top: 43px;
   }
   .custom-filter__flex {
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 13px 19px;
   }
   .custom-filter__label {
-    width: calc(33.3333333333% - 8px);
+    width: calc(33.3333333333% - 13px);
   }
   .custom-filter__buttons {
     gap: 32px;
+    margin-top: 47px;
   }
   .custom-filter__buttons .button {
     width: calc(50% - 16px);
@@ -249,7 +252,10 @@ button {
     width: 208px;
   }
   .custom-filter__group {
-    margin-bottom: 34px;
+    margin-bottom: 44px;
+  }
+  .custom-filter__name {
+    margin-bottom: 15px;
   }
 }
 @media (max-width: 750px) {

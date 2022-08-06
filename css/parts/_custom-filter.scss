@@ -61,6 +61,7 @@
     border: 2px solid;
     border-color: transparent;
     transition: all 0.3s;
+
     &:focus,
     &:hover {
       border-color: var(--col-accent);
@@ -81,28 +82,43 @@
   @media (max-width: 960px) {
     &--mob {
       padding: 40px;
+      padding-top: 43px;
     }
+
     &__flex {
       flex-direction: row;
       flex-wrap: wrap;
+      gap: 13px 19px;
+      ;
     }
+
     &__label {
-      width: calc((100% / 3) - 8px);
+      width: calc((100% / 3) - 13px);
     }
+
     &__buttons {
       gap: 32px;
+      margin-top: 47px;
+
       .button {
         width: calc(50% - 16px);
       }
     }
+
     &__range {
       gap: 32px;
     }
+
     &__input {
       width: 208px;
     }
+
     &__group {
-      margin-bottom: 34px;
+      margin-bottom: 44px;
+    }
+
+    &__name {
+      margin-bottom: 15px;
     }
   }
 
