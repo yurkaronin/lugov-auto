@@ -384,6 +384,9 @@ input[type=checkbox]:checked + label::before {
 .card-item__footer p {
   margin: 0;
 }
+.card-item__mob-photo-link {
+  display: none;
+}
 .card-item__label {
   position: absolute;
   top: 0;
@@ -411,6 +414,61 @@ input[type=checkbox]:checked + label::before {
     display: none;
   }
 }
+@media (max-width: 960px) {
+  .card-item__footer {
+    padding-top: 6px;
+  }
+}
+@media (max-width: 560px) {
+  .card-item {
+    background-color: var(--col--black);
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .card-item__body {
+    padding: 10px 20px 15px;
+  }
+  .card-item__header {
+    display: none;
+  }
+  .card-item__label {
+    display: none;
+  }
+  .card-item__text {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  .card-item__price::after {
+    display: block;
+  }
+  .card-item__footer {
+    border: none;
+    display: flex;
+    gap: 16px;
+  }
+  .card-item__mob-photo-link {
+    display: block;
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: 160px;
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .card-item__mob-photo-link img {
+    display: block;
+    width: 100%;
+  }
+  .card-item__mob-photo-link .card-item__label--mob {
+    display: block;
+    top: initial;
+    bottom: 8px;
+    height: 25px;
+    padding: 6.5px 9.5px;
+    border-radius: 4px;
+  }
+}
 
 .title {
   margin: 0;
@@ -426,9 +484,9 @@ input[type=checkbox]:checked + label::before {
     font-size: 40px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 560px) {
   .title {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 .wrapper {
@@ -806,6 +864,46 @@ input[type=checkbox]:checked + label::before {
 @media (max-width: 960px) {
   .main__filter {
     display: none;
+  }
+  .main__card-list .card-item {
+    width: calc(33.3333333333% - 22px);
+  }
+}
+@media (max-width: 850px) {
+  .main__card-list .card-item {
+    width: calc(50% - 16px);
+  }
+}
+@media (max-width: 750px) {
+  .main__card-list {
+    gap: 16px;
+  }
+  .main__card-list .card-item {
+    width: calc(50% - 8px);
+  }
+}
+@media (max-width: 560px) {
+  .main {
+    padding-top: 22px;
+  }
+  .main__card-list {
+    padding-top: 23px;
+    gap: 10px;
+  }
+  .main__card-list .card-item {
+    width: 100%;
+  }
+  .main__flex {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .main__title {
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+  }
+  .main__title .title {
+    margin: 0;
   }
 }
 
