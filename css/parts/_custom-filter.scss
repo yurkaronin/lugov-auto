@@ -127,6 +127,43 @@
       padding: 20px;
     }
 
+    &__label {
+      width: calc(50% - 10px);
+    }
+
+  }
+
+  @media (max-width: 500px) {
+    &__range {
+      gap: 16px;
+    }
+
+    &__label {
+      width: 100%;
+    }
+
+    &__input {
+      width: calc(50% - 8px);
+    }
+
+    &__buttons {
+      gap: 16px;
+    }
+
+    &__buttons {
+      margin-top: 36px;
+      .button {
+        width: 100%;
+      }
+    }
+
+    &__name {
+      margin-bottom: 10px;
+    }
+
+    &__group {
+      margin-bottom: 20px;
+    }
   }
 
 }

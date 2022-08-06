@@ -262,6 +262,35 @@ button {
   .custom-filter--mob {
     padding: 20px;
   }
+  .custom-filter__label {
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width: 500px) {
+  .custom-filter__range {
+    gap: 16px;
+  }
+  .custom-filter__label {
+    width: 100%;
+  }
+  .custom-filter__input {
+    width: calc(50% - 8px);
+  }
+  .custom-filter__buttons {
+    gap: 16px;
+  }
+  .custom-filter__buttons {
+    margin-top: 36px;
+  }
+  .custom-filter__buttons .button {
+    width: 100%;
+  }
+  .custom-filter__name {
+    margin-bottom: 10px;
+  }
+  .custom-filter__group {
+    margin-bottom: 20px;
+  }
 }
 
 input[type=checkbox] + label::before {
