@@ -1,251 +1,128 @@
-<!DOCTYPE html>
-<html lang="ru">
+  <!DOCTYPE html>
+  <html lang="ru">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Lugov Auto (Лугов авто) - Автосалон в Краснодаре</title>
+    <title>Lugov Auto (Лугов авто) - Автосалон в Краснодаре</title>
 
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
-  <link rel="stylesheet" href="./css/normalize.min.css">
-  <link rel="stylesheet" href="./css/style.css">
-</head>
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
 
-<body class="body-flex">
-  <header class="header">
-    <div class="header__container wrapper">
+  <body class="body-flex">
+    <header class="header">
+      <div class="header__container wrapper">
 
-      <div class="header__logo">
-        <a href="./index.html">
-          <img src="./img/logo.png" alt="Логотип" width="144" height="42">
-        </a>
-      </div>
-
-      <div class="header__desktop-nav">
-        <nav>
-          <ul class="header__nav-list">
-            <li class="header__nav-item">
-              <a class="header__nav-link header__nav-link--active" href="./index.html">Авто в наличии</a>
-            </li>
-            <li class="header__nav-item">
-              <a class="header__nav-link" href="./sale.html">Акции</a>
-            </li>
-            <li class="header__nav-item">
-              <a class="header__nav-link" href="./contacts.html">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="header__buttons">
-
-        <!-- кнопка вызова мобильного фильтра  -->
-        <a href="#" class="header__btn header__btn--filter js-filter-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 23 24" width="23">
-            <path fill="#00A5FF" d="M0 0v3l9.2 11.071V24l4.6-5v-4.929L23 3V0H0Z" />
-          </svg>
-
-          <svg class="cross" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 27" width="27">
-            <path stroke="#fff" stroke-width="2" d="m1 1 25 25m0-25L1 26" />
-          </svg>
-        </a>
-        <!-- телефон  -->
-        <a href="tel:+79180214444" class="header__btn header__btn--tel"><span>+7 (918) 021-44-44</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 23 23" width="23">
-            <path fill="#00A5FF"
-              d="m17.425 14.638-2.09 2.09c-.842-.226-2.814-.723-5.576-3.485-2.763-2.762-3.26-4.735-3.485-5.576l2.09-2.09C7.987 3.832 6.767 1.18 5.576 0 3.253.668 1.511 1.568 0 2.788c.123 2.258.851 7.82 6.622 13.59 5.77 5.77 11.332 6.499 13.59 6.622 1.22-1.51 2.121-3.252 2.788-5.576-1.18-1.188-3.832-2.408-5.575-2.786Z" />
-          </svg>
-        </a>
-        <!-- кнопка вызова мобильного меню  -->
-        <button class="header__btn header__btn--menu js-menu-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 20" width="25">
-            <path fill="#00A5FF" d="M0 0h25v2H0zm0 9h25v2H0zm0 9h25v2H0z" />
-          </svg>
-
-          <svg class="cross" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 27" width="27">
-            <path stroke="#fff" stroke-width="2" d="m1 1 25 25m0-25L1 26" />
-          </svg>
-        </button>
-
-      </div>
-      <!-- end wrapper -->
-    </div>
-
-    <!-- Мобильный фильтр автомобилей  -->
-    <div class="mobile-menu mobile-menu--filter">
-
-      <ul class="mobile-menu__list">
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="#"><span>Фильтр автомобилей</span>
-
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 26" width="25">
-              <path fill="#fff" d="M0 12h25v2H0z" />
-              <path fill="#fff" d="M13.5.5v25h-2V.5z" />
-            </svg>
+        <div class="header__logo">
+          <a href="./index.html">
+            <img src="./img/logo.png" alt="Логотип" width="144" height="42">
           </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="custom-filter custom-filter--mob">
-
-      <form>
-        <!-- марки автомобилей  -->
-        <fieldset class="custom-filter__group">
-          <legend class="custom-filter__name">марки автомобилей</legend>
-          <div class="custom-filter__flex">
-            <input class="visually-hidden" type="checkbox" name="" id="brand-porsche" value="Porsche">
-            <label class="custom-filter__label" for="brand-porsche">Porsche</label>
-
-            <input class="visually-hidden" type="checkbox" name="" id="brand-Mercedes-Benz" value="Mercedes Benz">
-            <label class="custom-filter__label" for="brand-Mercedes-Benz">Mercedes Benz</label>
-
-            <input class="visually-hidden" type="checkbox" name="" id="brand-BMW" value="BMW">
-            <label class="custom-filter__label" for="brand-BMW">BMW</label>
-
-            <input class="visually-hidden" type="checkbox" name="" id="brand-Landrover" value="Landrover">
-            <label class="custom-filter__label" for="brand-Landrover">Landrover</label>
-
-            <input class="visually-hidden" type="checkbox" name="" id="brand-Audi" value="Audi" checked>
-            <label class="custom-filter__label" for="brand-Audi">Audi</label>
-
-            <input class="visually-hidden" type="checkbox" name="" id="brand-Bentley" value="Bentley">
-            <label class="custom-filter__label" for="brand-Bentley">Bentley</label>
-
-            <input class="visually-hidden" type="checkbox" name="" id="brand-Toyota" value="Toyota">
-            <label class="custom-filter__label" for="brand-Toyota">Toyota</label>
-
-            <input class="visually-hidden" type="checkbox" name="" id="brand-Tesla" value="Tesla">
-            <label class="custom-filter__label" for="brand-Tesla">Tesla</label>
-
-            <input class="visually-hidden" type="checkbox" name="" id="brand-Lexus" value="Lexus">
-            <label class="custom-filter__label" for="brand-Lexus">Lexus</label>
-          </div>
-        </fieldset>
-
-        <!-- Цена  -->
-        <fieldset class="custom-filter__group">
-          <legend class="custom-filter__name">Цена</legend>
-          <div class="custom-filter__range">
-            <input class="custom-filter__input" type="number" name="price-min" id="price-min" placeholder="от">
-            <input class="custom-filter__input" type="number" name="price-max" id="price-max" placeholder="до">
-          </div>
-        </fieldset>
-
-        <!-- год выпуска  -->
-        <fieldset class="custom-filter__group">
-          <legend class="custom-filter__name">Год выпуска</legend>
-          <div class="custom-filter__range">
-            <input class="custom-filter__input" type="number" name="year-from" min="1900" max="2022" placeholder="от">
-            <input class="custom-filter__input" type="number" name="year-to" min="1900" max="2022" placeholder="до">
-          </div>
-        </fieldset>
-
-        <!-- тип кузова  -->
-        <fieldset class="custom-filter__group">
-          <legend class="custom-filter__name">Тип кузова</legend>
-          <div class="custom-filter__flex">
-            <input class="visually-hidden" type="checkbox" name="" id="bodywork-vezdehod" value="Внедорожник">
-            <label class="custom-filter__label" for="bodywork-vezdehod">Внедорожник</label>
-
-            <input class="visually-hidden" type="checkbox" name="" id="bodywork-Mercedes-sedan" value="Седан">
-            <label class="custom-filter__label" for="bodywork-Mercedes-sedan">Седан</label>
-
-            <input class="visually-hidden" type="checkbox" name="" id="bodywork-minivan" value="Минивэн">
-            <label class="custom-filter__label" for="bodywork-minivan">Минивэн</label>
-
-            <input class="visually-hidden" type="checkbox" name="" id="bodywork-cupe" value="Купе">
-            <label class="custom-filter__label" for="bodywork-cupe">Купе</label>
-
-            <input class="visually-hidden" type="checkbox" name="" id="bodywork-pickup" value="Пикап">
-            <label class="custom-filter__label" for="bodywork-pickup">Пикап</label>
-
-            <input class="visually-hidden" type="checkbox" name="" id="bodywork-other" value="Другой">
-            <label class="custom-filter__label" for="bodywork-other">Другой</label>
-          </div>
-        </fieldset>
-
-        <div class="custom-filter__buttons">
-          <button class="button" type="button">Применить</button>
-          <button class="button button--white" type="reset">Сбросить фильтр</button>
         </div>
 
+        <div class="header__desktop-nav">
+          <nav>
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a class="header__nav-link header__nav-link--active" href="./index.html">Авто в наличии</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="./sale.html">Акции</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="./contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
+        <div class="header__buttons">
 
-      </form>
-    </div>
-
-
-    <!-- мобильное меню  -->
-    <div class="mobile-menu mobile-menu--nav">
-      <ul class="mobile-menu__list">
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="./index.html"><span>Авто в наличии</span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 17" width="11">
-              <path stroke="#00A5FF" stroke-linecap="round" stroke-width="2" d="m1 16 8-7.273L1 1" />
+          <!-- кнопка вызова мобильного фильтра  -->
+          <a href="#" class="header__btn header__btn--filter js-filter-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 23 24" width="23">
+              <path fill="#00A5FF" d="M0 0v3l9.2 11.071V24l4.6-5v-4.929L23 3V0H0Z" />
             </svg>
 
+            <svg class="cross" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 27" width="27">
+              <path stroke="#fff" stroke-width="2" d="m1 1 25 25m0-25L1 26" />
+            </svg>
           </a>
-        </li>
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="./sale.html"><span>Акции</span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 17" width="11">
-              <path stroke="#00A5FF" stroke-linecap="round" stroke-width="2" d="m1 16 8-7.273L1 1" />
+          <!-- телефон  -->
+          <a href="tel:+79180214444" class="header__btn header__btn--tel"><span>+7 (918) 021-44-44</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 23 23" width="23">
+              <path fill="#00A5FF"
+                d="m17.425 14.638-2.09 2.09c-.842-.226-2.814-.723-5.576-3.485-2.763-2.762-3.26-4.735-3.485-5.576l2.09-2.09C7.987 3.832 6.767 1.18 5.576 0 3.253.668 1.511 1.568 0 2.788c.123 2.258.851 7.82 6.622 13.59 5.77 5.77 11.332 6.499 13.59 6.622 1.22-1.51 2.121-3.252 2.788-5.576-1.18-1.188-3.832-2.408-5.575-2.786Z" />
+            </svg>
+          </a>
+          <!-- кнопка вызова мобильного меню  -->
+          <button class="header__btn header__btn--menu js-menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 20" width="25">
+              <path fill="#00A5FF" d="M0 0h25v2H0zm0 9h25v2H0zm0 9h25v2H0z" />
             </svg>
 
-          </a>
-        </li>
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="./contacts.html"><span>Контакты</span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 17" width="11">
-              <path stroke="#00A5FF" stroke-linecap="round" stroke-width="2" d="m1 16 8-7.273L1 1" />
+            <svg class="cross" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 27" width="27">
+              <path stroke="#fff" stroke-width="2" d="m1 1 25 25m0-25L1 26" />
             </svg>
+          </button>
 
-          </a>
-        </li>
-      </ul>
-    </div>
-  </header>
+        </div>
+        <!-- end wrapper -->
+      </div>
 
-  <!-- основной контент  -->
-  <main class="main">
+      <!-- Мобильный фильтр автомобилей  -->
+      <div class="mobile-menu mobile-menu--filter">
 
-    <div class="wrapper main__flex">
-      <!-- фильтр десктоп  -->
-      <div class="main__filter custom-filter">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#"><span>Фильтр автомобилей</span>
+
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 26" width="25">
+                <path fill="#fff" d="M0 12h25v2H0z" />
+                <path fill="#fff" d="M13.5.5v25h-2V.5z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="custom-filter custom-filter--mob">
+
         <form>
           <!-- марки автомобилей  -->
           <fieldset class="custom-filter__group">
             <legend class="custom-filter__name">марки автомобилей</legend>
             <div class="custom-filter__flex">
-              <input class="visually-hidden" type="checkbox" name="" id="brand-porsche" value="Porsche">
+              <input class="visually-hidden" type="checkbox" name="Porsche" id="brand-porsche" value="Porsche">
               <label class="custom-filter__label" for="brand-porsche">Porsche</label>
 
-              <input class="visually-hidden" type="checkbox" name="" id="brand-Mercedes-Benz" value="Mercedes Benz">
+              <input class="visually-hidden" type="checkbox" name="Mercedes Benz" id="brand-Mercedes-Benz"
+                value="Mercedes Benz">
               <label class="custom-filter__label" for="brand-Mercedes-Benz">Mercedes Benz</label>
 
-              <input class="visually-hidden" type="checkbox" name="" id="brand-BMW" value="BMW">
+              <input class="visually-hidden" type="checkbox" name="brand-BMW" id="brand-BMW" value="BMW">
               <label class="custom-filter__label" for="brand-BMW">BMW</label>
 
-              <input class="visually-hidden" type="checkbox" name="" id="brand-Landrover" value="Landrover">
+              <input class="visually-hidden" type="checkbox" name="Landrover" id="brand-Landrover" value="Landrover">
               <label class="custom-filter__label" for="brand-Landrover">Landrover</label>
 
-              <input class="visually-hidden" type="checkbox" name="" id="brand-Audi" value="Audi" checked>
+              <input class="visually-hidden" type="checkbox" name="Audi" id="brand-Audi" value="Audi" checked>
               <label class="custom-filter__label" for="brand-Audi">Audi</label>
 
-              <input class="visually-hidden" type="checkbox" name="" id="brand-Bentley" value="Bentley">
+              <input class="visually-hidden" type="checkbox" name="Bentley" id="brand-Bentley" value="Bentley">
               <label class="custom-filter__label" for="brand-Bentley">Bentley</label>
 
-              <input class="visually-hidden" type="checkbox" name="" id="brand-Toyota" value="Toyota">
+              <input class="visually-hidden" type="checkbox" name="Toyota" id="brand-Toyota" value="Toyota">
               <label class="custom-filter__label" for="brand-Toyota">Toyota</label>
 
-              <input class="visually-hidden" type="checkbox" name="" id="brand-Tesla" value="Tesla">
+              <input class="visually-hidden" type="checkbox" name="Tesla" id="brand-Tesla" value="Tesla">
               <label class="custom-filter__label" for="brand-Tesla">Tesla</label>
 
-              <input class="visually-hidden" type="checkbox" name="" id="brand-Lexus" value="Lexus">
+              <input class="visually-hidden" type="checkbox" name="Lexus" id="brand-Lexus" value="Lexus">
               <label class="custom-filter__label" for="brand-Lexus">Lexus</label>
             </div>
           </fieldset>
@@ -272,22 +149,23 @@
           <fieldset class="custom-filter__group">
             <legend class="custom-filter__name">Тип кузова</legend>
             <div class="custom-filter__flex">
-              <input class="visually-hidden" type="checkbox" name="" id="bodywork-vezdehod" value="Внедорожник">
+              <input class="visually-hidden" type="checkbox" name="Внедорожник" id="bodywork-vezdehod"
+                value="Внедорожник">
               <label class="custom-filter__label" for="bodywork-vezdehod">Внедорожник</label>
 
-              <input class="visually-hidden" type="checkbox" name="" id="bodywork-Mercedes-sedan" value="Седан">
+              <input class="visually-hidden" type="checkbox" name="Седан" id="bodywork-Mercedes-sedan" value="Седан">
               <label class="custom-filter__label" for="bodywork-Mercedes-sedan">Седан</label>
 
-              <input class="visually-hidden" type="checkbox" name="" id="bodywork-minivan" value="Минивэн">
+              <input class="visually-hidden" type="checkbox" name="Минивэн" id="bodywork-minivan" value="Минивэн">
               <label class="custom-filter__label" for="bodywork-minivan">Минивэн</label>
 
-              <input class="visually-hidden" type="checkbox" name="" id="bodywork-cupe" value="Купе">
+              <input class="visually-hidden" type="checkbox" name="Купе" id="bodywork-cupe" value="Купе">
               <label class="custom-filter__label" for="bodywork-cupe">Купе</label>
 
-              <input class="visually-hidden" type="checkbox" name="" id="bodywork-pickup" value="Пикап">
+              <input class="visually-hidden" type="checkbox" name="Пикап" id="bodywork-pickup" value="Пикап">
               <label class="custom-filter__label" for="bodywork-pickup">Пикап</label>
 
-              <input class="visually-hidden" type="checkbox" name="" id="bodywork-other" value="Другой">
+              <input class="visually-hidden" type="checkbox" name="Другой" id="bodywork-other" value="Другой">
               <label class="custom-filter__label" for="bodywork-other">Другой</label>
             </div>
           </fieldset>
@@ -301,69 +179,471 @@
 
         </form>
       </div>
-      <div class="main__content">
-        <div class="main__title">
-          <h1 class="title">Авто в наличии</h1>
+
+
+      <!-- мобильное меню  -->
+      <div class="mobile-menu mobile-menu--nav">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="./index.html"><span>Авто в наличии</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 17" width="11">
+                <path stroke="#00A5FF" stroke-linecap="round" stroke-width="2" d="m1 16 8-7.273L1 1" />
+              </svg>
+
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="./sale.html"><span>Акции</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 17" width="11">
+                <path stroke="#00A5FF" stroke-linecap="round" stroke-width="2" d="m1 16 8-7.273L1 1" />
+              </svg>
+
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="./contacts.html"><span>Контакты</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 17" width="11">
+                <path stroke="#00A5FF" stroke-linecap="round" stroke-width="2" d="m1 16 8-7.273L1 1" />
+              </svg>
+
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- основной контент  -->
+    <main class="main">
+
+      <div class="wrapper main__flex">
+        <!-- фильтр десктоп  -->
+        <div class="main__filter custom-filter">
+          <form>
+            <!-- марки автомобилей  -->
+            <fieldset class="custom-filter__group">
+              <legend class="custom-filter__name">марки автомобилей</legend>
+              <div class="custom-filter__flex">
+                <input class="visually-hidden" type="checkbox" name="Porsche" id="brand-porsche" value="Porsche">
+                <label class="custom-filter__label" for="brand-porsche">Porsche</label>
+
+                <input class="visually-hidden" type="checkbox" name="Mercedes Benz" id="brand-Mercedes-Benz"
+                  value="Mercedes Benz">
+                <label class="custom-filter__label" for="brand-Mercedes-Benz">Mercedes Benz</label>
+
+                <input class="visually-hidden" type="checkbox" name="BMW" id="brand-BMW" value="BMW">
+                <label class="custom-filter__label" for="brand-BMW">BMW</label>
+
+                <input class="visually-hidden" type="checkbox" name="Landrover" id="brand-Landrover" value="Landrover">
+                <label class="custom-filter__label" for="brand-Landrover">Landrover</label>
+
+                <input class="visually-hidden" type="checkbox" name="Audi" id="brand-Audi" value="Audi" checked>
+                <label class="custom-filter__label" for="brand-Audi">Audi</label>
+
+                <input class="visually-hidden" type="checkbox" name="Bentley" id="brand-Bentley" value="Bentley">
+                <label class="custom-filter__label" for="brand-Bentley">Bentley</label>
+
+                <input class="visually-hidden" type="checkbox" name="Toyota" id="brand-Toyota" value="Toyota">
+                <label class="custom-filter__label" for="brand-Toyota">Toyota</label>
+
+                <input class="visually-hidden" type="checkbox" name="Tesla" id="brand-Tesla" value="Tesla">
+                <label class="custom-filter__label" for="brand-Tesla">Tesla</label>
+
+                <input class="visually-hidden" type="checkbox" name="Lexus" id="brand-Lexus" value="Lexus">
+                <label class="custom-filter__label" for="brand-Lexus">Lexus</label>
+              </div>
+            </fieldset>
+
+            <!-- Цена  -->
+            <fieldset class="custom-filter__group">
+              <legend class="custom-filter__name">Цена</legend>
+              <div class="custom-filter__range">
+                <input class="custom-filter__input" type="number" name="price-min" id="price-min" placeholder="от">
+                <input class="custom-filter__input" type="number" name="price-max" id="price-max" placeholder="до">
+              </div>
+            </fieldset>
+
+            <!-- год выпуска  -->
+            <fieldset class="custom-filter__group">
+              <legend class="custom-filter__name">Год выпуска</legend>
+              <div class="custom-filter__range">
+                <input class="custom-filter__input" type="number" name="year-from" min="1900" max="2022"
+                  placeholder="от">
+                <input class="custom-filter__input" type="number" name="year-to" min="1900" max="2022" placeholder="до">
+              </div>
+            </fieldset>
+
+            <!-- тип кузова  -->
+            <fieldset class="custom-filter__group">
+              <legend class="custom-filter__name">Тип кузова</legend>
+              <div class="custom-filter__flex">
+                <input class="visually-hidden" type="checkbox" name="Внедорожник" id="bodywork-vezdehod"
+                  value="Внедорожник">
+                <label class="custom-filter__label" for="bodywork-vezdehod">Внедорожник</label>
+
+                <input class="visually-hidden" type="checkbox" name="Седан" id="bodywork-Mercedes-sedan" value="Седан">
+                <label class="custom-filter__label" for="bodywork-Mercedes-sedan">Седан</label>
+
+                <input class="visually-hidden" type="checkbox" name="Минивэн" id="bodywork-minivan" value="Минивэн">
+                <label class="custom-filter__label" for="bodywork-minivan">Минивэн</label>
+
+                <input class="visually-hidden" type="checkbox" name="Купе" id="bodywork-cupe" value="Купе">
+                <label class="custom-filter__label" for="bodywork-cupe">Купе</label>
+
+                <input class="visually-hidden" type="checkbox" name="Пикап" id="bodywork-pickup" value="Пикап">
+                <label class="custom-filter__label" for="bodywork-pickup">Пикап</label>
+
+                <input class="visually-hidden" type="checkbox" name="Другой" id="bodywork-other" value="Другой">
+                <label class="custom-filter__label" for="bodywork-other">Другой</label>
+              </div>
+            </fieldset>
+
+            <div class="custom-filter__buttons">
+              <button class="button" type="button">Применить</button>
+              <button class="button button--white" type="reset">Сбросить фильтр</button>
+            </div>
+
+
+
+          </form>
+        </div>
+        <div class="main__content">
+          <div class="main__title">
+            <h1 class="title">Авто в наличии</h1>
+          </div>
+          <div class="main__card-list">
+
+            <!-- карточка автомобиля  -->
+            <article class="card-item">
+              <div class="card-item__header">
+                <!-- тут будет слайдер  -->
+                <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+              </div>
+
+              <div class="card-item__body">
+                <a class="card-item__link" href="#">Kia Carnival, 2021</a>
+                <div class="card-item__text">
+                  <p class="card-item__price">3 300 000 ₽</p>
+                  <p>в кредит: <b>35 000 ₽/мес.</b></p>
+                </div>
+                <p class="card-item__footer">25 600 км. / 5.3 4WDAT (343 л.с.) / Дизель / АКПП / Полный / 1 собственник</p>
+              </div>
+
+              <!-- лейблы  -->
+              <span class="card-item__label">Лучшая цена</span>
+              <!-- <span class="card-item__label">Новинка</span> -->
+              <!-- <span class="card-item__label">Спецпредложение</span> -->
+
+            </article>
+            <!-- карточка автомобиля  -->
+            <article class="card-item">
+              <div class="card-item__header">
+                <!-- тут будет слайдер  -->
+                <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+              </div>
+
+              <div class="card-item__body">
+                <a class="card-item__link" href="#">Kia Carnival, 2021</a>
+                <div class="card-item__text">
+                  <p class="card-item__price">3 300 000 ₽</p>
+                  <p>в кредит: <b>35 000 ₽/мес.</b></p>
+                </div>
+                <p class="card-item__footer">25 600 км. / 5.3 4WDAT (343 л.с.) / Дизель / АКПП / Полный / 1 собственник</p>
+              </div>
+
+              <!-- лейблы  -->
+              <span class="card-item__label">Лучшая цена</span>
+              <!-- <span class="card-item__label">Новинка</span> -->
+              <!-- <span class="card-item__label">Спецпредложение</span> -->
+
+            </article>
+            <!-- карточка автомобиля  -->
+            <article class="card-item">
+              <div class="card-item__header">
+                <!-- тут будет слайдер  -->
+                <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+              </div>
+
+              <div class="card-item__body">
+                <a class="card-item__link" href="#">Kia Carnival, 2021</a>
+                <div class="card-item__text">
+                  <p class="card-item__price">3 300 000 ₽</p>
+                  <p>в кредит: <b>35 000 ₽/мес.</b></p>
+                </div>
+                <p class="card-item__footer">25 600 км. / 5.3 4WDAT (343 л.с.) / Дизель / АКПП / Полный / 1 собственник</p>
+              </div>
+
+              <!-- лейблы  -->
+              <span class="card-item__label">Лучшая цена</span>
+              <!-- <span class="card-item__label">Новинка</span> -->
+              <!-- <span class="card-item__label">Спецпредложение</span> -->
+
+            </article>
+            <!-- карточка автомобиля  -->
+            <article class="card-item">
+              <div class="card-item__header">
+                <!-- тут будет слайдер  -->
+                <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+              </div>
+
+              <div class="card-item__body">
+                <a class="card-item__link" href="#">Kia Carnival, 2021</a>
+                <div class="card-item__text">
+                  <p class="card-item__price">3 300 000 ₽</p>
+                  <p>в кредит: <b>35 000 ₽/мес.</b></p>
+                </div>
+                <p class="card-item__footer">25 600 км. / 5.3 4WDAT (343 л.с.) / Дизель / АКПП / Полный / 1 собственник</p>
+              </div>
+
+              <!-- лейблы  -->
+              <span class="card-item__label">Лучшая цена</span>
+              <!-- <span class="card-item__label">Новинка</span> -->
+              <!-- <span class="card-item__label">Спецпредложение</span> -->
+
+            </article>
+
+            <!-- карточка автомобиля  -->
+            <article class="card-item">
+              <div class="card-item__header">
+                <!-- тут будет слайдер  -->
+                <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+              </div>
+
+              <div class="card-item__body">
+                <a class="card-item__link" href="#">Kia Carnival, 2021</a>
+                <div class="card-item__text">
+                  <p class="card-item__price">3 300 000 ₽</p>
+                  <p>в кредит: <b>35 000 ₽/мес.</b></p>
+                </div>
+                <p class="card-item__footer">25 600 км. / 5.3 4WDAT (343 л.с.) / Дизель / АКПП / Полный / 1 собственник</p>
+              </div>
+
+              <!-- лейблы  -->
+              <span class="card-item__label">Лучшая цена</span>
+              <!-- <span class="card-item__label">Новинка</span> -->
+              <!-- <span class="card-item__label">Спецпредложение</span> -->
+
+            </article>
+
+            <!-- карточка автомобиля  -->
+            <article class="card-item">
+              <div class="card-item__header">
+                <!-- тут будет слайдер  -->
+                <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+              </div>
+
+              <div class="card-item__body">
+                <a class="card-item__link" href="#">Kia Carnival, 2021</a>
+                <div class="card-item__text">
+                  <p class="card-item__price">3 300 000 ₽</p>
+                  <p>в кредит: <b>35 000 ₽/мес.</b></p>
+                </div>
+                <p class="card-item__footer">25 600 км. / 5.3 4WDAT (343 л.с.) / Дизель / АКПП / Полный / 1 собственник</p>
+              </div>
+
+              <!-- лейблы  -->
+              <span class="card-item__label">Лучшая цена</span>
+              <!-- <span class="card-item__label">Новинка</span> -->
+              <!-- <span class="card-item__label">Спецпредложение</span> -->
+
+            </article>
+
+            <!-- карточка автомобиля  -->
+            <article class="card-item">
+              <div class="card-item__header">
+                <!-- тут будет слайдер  -->
+                <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+              </div>
+
+              <div class="card-item__body">
+                <a class="card-item__link" href="#">Kia Carnival, 2021</a>
+                <div class="card-item__text">
+                  <p class="card-item__price">3 300 000 ₽</p>
+                  <p>в кредит: <b>35 000 ₽/мес.</b></p>
+                </div>
+                <p class="card-item__footer">25 600 км. / 5.3 4WDAT (343 л.с.) / Дизель / АКПП / Полный / 1 собственник</p>
+              </div>
+
+              <!-- лейблы  -->
+              <span class="card-item__label">Лучшая цена</span>
+              <!-- <span class="card-item__label">Новинка</span> -->
+              <!-- <span class="card-item__label">Спецпредложение</span> -->
+
+            </article>
+
+            <!-- карточка автомобиля  -->
+            <article class="card-item">
+              <div class="card-item__header">
+                <!-- тут будет слайдер  -->
+                <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+              </div>
+
+              <div class="card-item__body">
+                <a class="card-item__link" href="#">Kia Carnival, 2021</a>
+                <div class="card-item__text">
+                  <p class="card-item__price">3 300 000 ₽</p>
+                  <p>в кредит: <b>35 000 ₽/мес.</b></p>
+                </div>
+                <p class="card-item__footer">25 600 км. / 5.3 4WDAT (343 л.с.) / Дизель / АКПП / Полный / 1 собственник</p>
+              </div>
+
+              <!-- лейблы  -->
+              <span class="card-item__label">Лучшая цена</span>
+              <!-- <span class="card-item__label">Новинка</span> -->
+              <!-- <span class="card-item__label">Спецпредложение</span> -->
+
+            </article>
+
+            <!-- карточка автомобиля  -->
+            <article class="card-item">
+              <div class="card-item__header">
+                <!-- тут будет слайдер  -->
+                <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+              </div>
+
+              <div class="card-item__body">
+                <a class="card-item__link" href="#">Kia Carnival, 2021</a>
+                <div class="card-item__text">
+                  <p class="card-item__price">3 300 000 ₽</p>
+                  <p>в кредит: <b>35 000 ₽/мес.</b></p>
+                </div>
+                <p class="card-item__footer">25 600 км. / 5.3 4WDAT (343 л.с.) / Дизель / АКПП / Полный / 1 собственник</p>
+              </div>
+
+              <!-- лейблы  -->
+              <span class="card-item__label">Лучшая цена</span>
+              <!-- <span class="card-item__label">Новинка</span> -->
+              <!-- <span class="card-item__label">Спецпредложение</span> -->
+
+            </article>
+
+            <!-- карточка автомобиля  -->
+            <article class="card-item">
+              <div class="card-item__header">
+                <!-- тут будет слайдер  -->
+                <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+              </div>
+
+              <div class="card-item__body">
+                <a class="card-item__link" href="#">Kia Carnival, 2021</a>
+                <div class="card-item__text">
+                  <p class="card-item__price">3 300 000 ₽</p>
+                  <p>в кредит: <b>35 000 ₽/мес.</b></p>
+                </div>
+                <p class="card-item__footer">25 600 км. / 5.3 4WDAT (343 л.с.) / Дизель / АКПП / Полный / 1 собственник</p>
+              </div>
+
+              <!-- лейблы  -->
+              <span class="card-item__label">Лучшая цена</span>
+              <!-- <span class="card-item__label">Новинка</span> -->
+              <!-- <span class="card-item__label">Спецпредложение</span> -->
+
+            </article>
+
+            <!-- карточка автомобиля  -->
+            <article class="card-item">
+              <div class="card-item__header">
+                <!-- тут будет слайдер  -->
+                <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+              </div>
+
+              <div class="card-item__body">
+                <a class="card-item__link" href="#">Kia Carnival, 2021</a>
+                <div class="card-item__text">
+                  <p class="card-item__price">3 300 000 ₽</p>
+                  <p>в кредит: <b>35 000 ₽/мес.</b></p>
+                </div>
+                <p class="card-item__footer">25 600 км. / 5.3 4WDAT (343 л.с.) / Дизель / АКПП / Полный / 1 собственник</p>
+              </div>
+
+              <!-- лейблы  -->
+              <span class="card-item__label">Лучшая цена</span>
+              <!-- <span class="card-item__label">Новинка</span> -->
+              <!-- <span class="card-item__label">Спецпредложение</span> -->
+
+            </article>
+
+            <!-- карточка автомобиля  -->
+            <article class="card-item">
+              <div class="card-item__header">
+                <!-- тут будет слайдер  -->
+                <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+              </div>
+
+              <div class="card-item__body">
+                <a class="card-item__link" href="#">Kia Carnival, 2021</a>
+                <div class="card-item__text">
+                  <p class="card-item__price">3 300 000 ₽</p>
+                  <p>в кредит: <b>35 000 ₽/мес.</b></p>
+                </div>
+                <p class="card-item__footer">25 600 км. / 5.3 4WDAT (343 л.с.) / Дизель / АКПП / Полный / 1 собственник</p>
+              </div>
+
+              <!-- лейблы  -->
+              <span class="card-item__label">Лучшая цена</span>
+              <!-- <span class="card-item__label">Новинка</span> -->
+              <!-- <span class="card-item__label">Спецпредложение</span> -->
+
+            </article>
+          </div>
         </div>
       </div>
-    </div>
 
-  </main>
+    </main>
 
-  <footer class="footer">
-    <div class="wrapper">
-      <div class="footer__container">
-        <!-- копирайт  -->
-        <p class="footer__copyright">2022 © LUGOV AUTO. Все права защищены.</p>
-        <!-- менюшка в подвале  -->
-        <div class="footer__menu footer-menu">
-          <ul class="footer-menu__list">
-            <li class="footer-menu__item">
-              <a class="footer-menu__link" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" width="16">
-                  <path fill="#00A5FF"
-                    d="M11.233 0H4.766A4.772 4.772 0 0 0 0 4.766v6.467A4.772 4.772 0 0 0 4.766 16h6.467A4.772 4.772 0 0 0 16 11.233V4.766A4.772 4.772 0 0 0 11.233 0Zm3.157 11.233a3.157 3.157 0 0 1-3.157 3.157H4.766a3.157 3.157 0 0 1-3.156-3.157V4.766A3.157 3.157 0 0 1 4.766 1.61h6.467a3.157 3.157 0 0 1 3.157 3.156v6.467Z" />
-                  <path fill="#00A5FF"
-                    d="M8 3.862A4.143 4.143 0 0 0 3.862 8 4.143 4.143 0 0 0 8 12.138 4.143 4.143 0 0 0 12.14 8 4.143 4.143 0 0 0 8 3.862Zm0 6.667A2.529 2.529 0 1 1 8 5.47a2.529 2.529 0 0 1 0 5.058Zm4.146-5.644a.992.992 0 1 0 0-1.984.992.992 0 0 0 0 1.984Z" />
-                </svg>
-                <span>мы в Instagram</span>
-              </a>
-            </li>
-            <li class="footer-menu__item">
-              <a class="footer-menu__link" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" width="16">
-                  <path stroke="#00A5FF" stroke-linecap="round" stroke-width="2" d="M1 8h9.5m0 0L8 5m2.5 3L8 11" />
-                  <path stroke="#00A5FF"
-                    d="M14.5 12V4A2.5 2.5 0 0 0 12 1.5H8.5v-1H12A3.5 3.5 0 0 1 15.5 4v8a3.5 3.5 0 0 1-3.5 3.5H8.5v-1H12a2.5 2.5 0 0 0 2.5-2.5Z" />
-                </svg>
-                <span>Войти</span>
-              </a>
-            </li>
-            <li class="footer-menu__item">
-              <a class="footer-menu__link" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16" width="16">
-                  <path stroke="#00A5FF" stroke-miterlimit="10" stroke-width="2"
-                    d="M11.96 1.023H5.972c-.723 0-1.51-.256-2.01.93L4 5" />
-                  <path stroke="#00A5FF" stroke-miterlimit="10" stroke-width="2"
-                    d="M8 1.023h5.99c.723 0 1.51-.256 2.01.93L15.961 5M12 6H5L3 5m9 7H1V8.07C1 7.402 3 5 3 5m4 7v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-2m5-3H3m0-4L1 3" />
-                  <path stroke="#00A5FF" stroke-miterlimit="10" stroke-width="2"
-                    d="M8 6h7l2-1m-9 7h11V8.07C19 7.402 17 5 17 5m-4 7v2a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-2m-5-3h4m0-4 2-2" />
-                </svg>
-                <span>Архив</span>
-              </a>
-            </li>
-          </ul>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__container">
+          <!-- копирайт  -->
+          <p class="footer__copyright">2022 © LUGOV AUTO. Все права защищены.</p>
+          <!-- менюшка в подвале  -->
+          <div class="footer__menu footer-menu">
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" width="16">
+                    <path fill="#00A5FF"
+                      d="M11.233 0H4.766A4.772 4.772 0 0 0 0 4.766v6.467A4.772 4.772 0 0 0 4.766 16h6.467A4.772 4.772 0 0 0 16 11.233V4.766A4.772 4.772 0 0 0 11.233 0Zm3.157 11.233a3.157 3.157 0 0 1-3.157 3.157H4.766a3.157 3.157 0 0 1-3.156-3.157V4.766A3.157 3.157 0 0 1 4.766 1.61h6.467a3.157 3.157 0 0 1 3.157 3.156v6.467Z" />
+                    <path fill="#00A5FF"
+                      d="M8 3.862A4.143 4.143 0 0 0 3.862 8 4.143 4.143 0 0 0 8 12.138 4.143 4.143 0 0 0 12.14 8 4.143 4.143 0 0 0 8 3.862Zm0 6.667A2.529 2.529 0 1 1 8 5.47a2.529 2.529 0 0 1 0 5.058Zm4.146-5.644a.992.992 0 1 0 0-1.984.992.992 0 0 0 0 1.984Z" />
+                  </svg>
+                  <span>мы в Instagram</span>
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" width="16">
+                    <path stroke="#00A5FF" stroke-linecap="round" stroke-width="2" d="M1 8h9.5m0 0L8 5m2.5 3L8 11" />
+                    <path stroke="#00A5FF"
+                      d="M14.5 12V4A2.5 2.5 0 0 0 12 1.5H8.5v-1H12A3.5 3.5 0 0 1 15.5 4v8a3.5 3.5 0 0 1-3.5 3.5H8.5v-1H12a2.5 2.5 0 0 0 2.5-2.5Z" />
+                  </svg>
+                  <span>Войти</span>
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16" width="16">
+                    <path stroke="#00A5FF" stroke-miterlimit="10" stroke-width="2"
+                      d="M11.96 1.023H5.972c-.723 0-1.51-.256-2.01.93L4 5" />
+                    <path stroke="#00A5FF" stroke-miterlimit="10" stroke-width="2"
+                      d="M8 1.023h5.99c.723 0 1.51-.256 2.01.93L15.961 5M12 6H5L3 5m9 7H1V8.07C1 7.402 3 5 3 5m4 7v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-2m5-3H3m0-4L1 3" />
+                    <path stroke="#00A5FF" stroke-miterlimit="10" stroke-width="2"
+                      d="M8 6h7l2-1m-9 7h11V8.07C19 7.402 17 5 17 5m-4 7v2a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-2m-5-3h4m0-4 2-2" />
+                  </svg>
+                  <span>Архив</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- ссылка на разрабов  -->
+          <p class="footer__developer-link">Разработка сайта — <a href="#" target="_blank">Very Good</a></p>
         </div>
-        <!-- ссылка на разрабов  -->
-        <p class="footer__developer-link">Разработка сайта — <a href="#" target="_blank">Very Good</a></p>
+
+
+
       </div>
+    </footer>
 
+    <script src="./js/scripts.js"></script>
+  </body>
 
-
-    </div>
-  </footer>
-
-  <script src="./js/scripts.js"></script>
-</body>
-
-</html>
+  </html>
