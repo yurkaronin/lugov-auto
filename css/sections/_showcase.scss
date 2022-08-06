@@ -1,0 +1,30 @@
+.showcase {
+  .card-item {
+    width: calc(25% - 24px);
+  }
+
+  @media (max-width: 1200px) {
+    .card-item {
+      width: calc((100% / 3) - 22px);
+    }
+  }
+  @media (max-width: 960px) {
+    .card-item {
+      width: calc(50% - 16px);
+    }
+  }
+  @media (max-width: 750px) {
+    .card-item {
+      width: calc(50% - 8px);
+    }
+  }
+  @media (max-width: 560px) {
+    .wrapper {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .card-item {
+      width: 100%;
+    }
+  }
+}
