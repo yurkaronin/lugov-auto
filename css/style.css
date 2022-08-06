@@ -1025,7 +1025,9 @@ input[type=checkbox]:checked + label::before {
 .contacts__details {
   display: flex;
   gap: 32px;
-  padding: 25px 0 55px;
+  padding: 25px 0 61px;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 .contacts__details a {
   text-decoration: none;
@@ -1035,11 +1037,13 @@ input[type=checkbox]:checked + label::before {
   color: var(--col--wh);
   font-size: 16px;
   width: 480px;
+  line-height: 2;
 }
 .contacts__credit {
   font-size: 16px;
   color: var(--col-text);
   width: 224px;
+  line-height: 2;
 }
 .contacts__credit a {
   color: var(--col--wh);
@@ -1048,6 +1052,7 @@ input[type=checkbox]:checked + label::before {
   font-size: 16px;
   color: var(--col--wh);
   width: 480px;
+  line-height: 2;
 }
 .contacts__worktime span {
   color: var(--col-text);
