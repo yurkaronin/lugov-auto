@@ -1,0 +1,134 @@
+.full-card {
+  color: var(--col--wh);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 480px 864px;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 26px 32px;
+  }
+
+  &__details {
+    width: 100%;
+
+    .button {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__features {
+    padding-bottom: 37px;
+    border-bottom: 1px solid;
+    border-color: var(--col--gray);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0;
+    text-transform: uppercase;
+    color: inherit;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  &__features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  li {
+    font-size: 16px;
+    color: inherit;
+    display: flex;
+    gap: 7px;
+    justify-content: space-between;
+
+    span:first-child {
+      color: var(--col-text);
+      width: 120px;
+      font-weight: 400;
+      flex-shrink: 0;
+    }
+
+    span:last-child {
+      font-weight: 700;
+      width: 224px;
+    }
+  }
+
+  &__price {
+    padding-top: 41px;
+    padding-bottom: 26px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 24px;
+    }
+
+    .old-price {
+      color: var(--col-text);
+      font-size: 16px;
+      display: block;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .price-now {
+      font-size: 40px;
+      color: var(--col--wh);
+      display: block;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .credit-price {
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--col--wh);
+      line-height: 1;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__description {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    .button {
+      display: flex;
+      max-width: max-content;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__desc-text {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--col-text);
+    margin-bottom: 24px;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 1%;
+    }
+
+  }
+}

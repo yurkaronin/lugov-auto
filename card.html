@@ -14,7 +14,177 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body class="body-flex">
+
+  <header class="header">
+    <div class="header__container wrapper">
+
+      <div class="header__logo">
+        <a href="./index.html">
+          <img src="./img/logo.png" alt="Логотип" width="144" height="42">
+        </a>
+      </div>
+
+      <div class="header__desktop-nav">
+        <nav>
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link header__nav-link--active" href="./index.html">Авто в наличии</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="./sale.html">Акции</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="./contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header__buttons">
+
+        <!-- телефон  -->
+        <a href="tel:+79180214444" class="header__btn header__btn--tel"><span>+7 (918) 021-44-44</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 23 23" width="23">
+            <path fill="#00A5FF"
+              d="m17.425 14.638-2.09 2.09c-.842-.226-2.814-.723-5.576-3.485-2.763-2.762-3.26-4.735-3.485-5.576l2.09-2.09C7.987 3.832 6.767 1.18 5.576 0 3.253.668 1.511 1.568 0 2.788c.123 2.258.851 7.82 6.622 13.59 5.77 5.77 11.332 6.499 13.59 6.622 1.22-1.51 2.121-3.252 2.788-5.576-1.18-1.188-3.832-2.408-5.575-2.786Z" />
+          </svg>
+        </a>
+        <!-- кнопка вызова мобильного меню  -->
+        <button class="header__btn header__btn--menu js-menu-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 20" width="25">
+            <path fill="#00A5FF" d="M0 0h25v2H0zm0 9h25v2H0zm0 9h25v2H0z" />
+          </svg>
+
+          <svg class="cross" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 27 27" width="27">
+            <path stroke="#fff" stroke-width="2" d="m1 1 25 25m0-25L1 26" />
+          </svg>
+        </button>
+
+      </div>
+      <!-- end wrapper -->
+    </div>
+
+    <!-- мобильное меню  -->
+    <div class="mobile-menu mobile-menu--nav">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="./index.html"><span>Авто в наличии</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 17" width="11">
+              <path stroke="#00A5FF" stroke-linecap="round" stroke-width="2" d="m1 16 8-7.273L1 1" />
+            </svg>
+
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="./sale.html"><span>Акции</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 17" width="11">
+              <path stroke="#00A5FF" stroke-linecap="round" stroke-width="2" d="m1 16 8-7.273L1 1" />
+            </svg>
+
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="./contacts.html"><span>Контакты</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 17" width="11">
+              <path stroke="#00A5FF" stroke-linecap="round" stroke-width="2" d="m1 16 8-7.273L1 1" />
+            </svg>
+
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main full-card">
+    <div class="wrapper">
+
+      <div class="main__title">
+        <h2 class="title">Chevrolet Tahoe, 2021</h2>
+        <span class="label">лучшая цена</span>
+      </div>
+
+      <div class="full-card__grid">
+
+        <!-- Характеристики сбоку  -->
+        <div class="full-card__details">
+
+          <div class="full-card__features">
+            <h2 class="full-card__title">Характеристики</h2>
+            <ul class="full-card__features-list">
+              <li>
+                <span>Пробег</span>
+                <span>25 600 км.</span>
+              </li>
+              <li>
+                <span>Двигатель</span>
+                <span>5.3 4WD AT (343 л.с.)</span>
+              </li>
+              <li>
+                <span>Тип двигателя</span>
+                <span>Дизель</span>
+              </li>
+              <li>
+                <span>КПП</span>
+                <span>АКПП</span>
+              </li>
+              <li>
+                <span>Привод</span>
+                <span>Полный</span>
+              </li>
+              <li>
+                <span>В ПТС</span>
+                <span>1 собственник</span>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="full-card__price">
+            <ul>
+              <li class="old-price"><del>10 700 000 ₽</del></li>
+              <li class="price-now">9 750 000 ₽</li>
+              <li class="credit-price">35 000 ₽/мес.</li>
+            </ul>
+            <a class="button" href="#">Получить консультацию</a>
+          </div>
+        </div>
+
+        <!-- фотогалерея  -->
+        <div class="full-card__slider">
+          <!-- тут будет слайдер с фото  -->
+          <img src="./img/chevrolet/1.jpg" alt="фото автомобиля" width="864">
+        </div>
+
+        <!-- Описание  -->
+        <div class="full-card__description">
+          <h2 class="full-card__descr-title">Описание</h2>
+          <div class="full-card__desc-text">
+            <ul>
+              <li>Комплектация RST</li>
+              <li>3-й ряд сидений</li>
+              <li>Отделка интерьера Перфорированная кожа черного цвета с красной прострочкой</li>
+              <li>Сиденья второго ряда раздельные (капитанские) (Механическая регулировка угла наклона спинки и продольная
+                регулировка, Электропривод складывания, с откидными подлокотниками</li>
+              <li>Мультимедиа: Развлекательная система для пассажиров второго ряда</li>
+              <li>Два комплекта 2-х канальных цифровых беспроводных наушников</li>
+              <li>Мультимедийная система Chevrolet Infotainment 3 Premium с 10.2 с HD цветным дисплеем</li>
+              <li>Помощь при перестроении</li>
+              <li>Подогрев задних сидений</li>
+              <li>3х зонный климат контроль</li>
+              <li>Аудиосистема Bose</li>
+              <li>На данный автомобиль Вы можете заказать online презентацию</li>
+              <li>Вы можете приобрести в кредит на выгодных условиях</li>
+              <li>Наличный и безналичный расчет</li>
+              <li>Обмен по программе TRADE-IN, кредитные программы.</li>
+            </ul>
+
+          </div>
+          <a class="button button--white" href="#">Назад к списку</a>
+        </div>
+      </div>
+    </div>
+  </main>
 
   <footer class="footer">
     <div class="wrapper">

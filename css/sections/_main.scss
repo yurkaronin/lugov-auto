@@ -18,9 +18,29 @@
   &__title {
     border-bottom: 1px solid;
     border-color: var(--col--gray);
+    position: relative;
 
     .title {
       margin-bottom: 32px;
+    }
+    .label {
+      position: absolute;
+      top: initial;
+      left: 0;
+      bottom: -16px;
+      z-index: 2;
+      background-color: var(--col-accent);
+      color: var(--col--wh);
+      display: block;
+      max-width: max-content;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1;
+      text-transform: uppercase;
+      height: 32px;
+      padding: 10px 16px;
+      transition: all 0.3s;
+      border-radius: 4px;
     }
   }
 
