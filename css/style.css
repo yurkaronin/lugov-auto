@@ -1240,17 +1240,23 @@ input[type=checkbox]:checked + label::before {
 }
 .full-card__description .button {
   display: flex;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
   justify-content: center;
   align-items: center;
+  max-width: 226px;
+  width: 100%;
+}
+.full-card__descr-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 21px;
 }
 .full-card__desc-text {
   font-weight: 400;
   font-size: 16px;
   color: var(--col-text);
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 .full-card__desc-text ul {
   padding: 0;
@@ -1258,7 +1264,61 @@ input[type=checkbox]:checked + label::before {
   list-style: none;
 }
 .full-card__desc-text li {
-  margin-bottom: 1%;
+  margin-bottom: 1.5%;
+}
+.full-card__slider-nav {
+  position: absolute;
+  display: flex;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  gap: 8px;
+}
+.full-card__slider-nav .swiper-button {
+  position: initial;
+  height: 48px;
+  width: 48px;
+  background: var(--col--wh);
+  border-radius: 4px;
+  border: none;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.full-card__slider-nav .swiper-button svg {
+  pointer-events: none;
+}
+.full-card__slider-nav .swiper-button::after {
+  display: none;
+}
+.full-card .swiper-pagination {
+  top: initial;
+  left: initial;
+  right: 30px;
+  bottom: 30px;
+  height: 48px;
+  width: 48px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: initial;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  background: var(--col--black);
+  opacity: 0.8;
+  border-radius: 4px;
+}
+.full-card .swiper-slide {
+  border-radius: 4px;
+}
+.full-card .swiper-slide img {
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+  width: 100%;
 }
 
 .footer {

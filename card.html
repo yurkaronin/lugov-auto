@@ -11,6 +11,9 @@
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="./css/normalize.min.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -152,8 +155,45 @@
 
         <!-- фотогалерея  -->
         <div class="full-card__slider">
-          <!-- тут будет слайдер с фото  -->
-          <img src="./img/chevrolet/1.jpg" alt="фото автомобиля" width="864">
+          <!-- Swiper -->
+          <div class="swiper mySwiper swiper-personal-card">
+
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/chevrolet/1.jpg" alt="фото автомобиля" width="864">
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/chevrolet/1.jpg" alt="фото автомобиля" width="864">
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/chevrolet/1.jpg" alt="фото автомобиля" width="864">
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/chevrolet/1.jpg" alt="фото автомобиля" width="864">
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/chevrolet/1.jpg" alt="фото автомобиля" width="864">
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/chevrolet/1.jpg" alt="фото автомобиля" width="864">
+              </div>
+            </div>
+            <div class="full-card__slider-nav">
+              <button class="swiper-button swiper-button-prev" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 18" width="11">
+                  <path stroke="#000" stroke-linecap="round" stroke-width="2" d="M10 1 2 8.758 10 17"/>
+                </svg>
+              </button>
+              <button class="swiper-button swiper-button-next" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 18" width="11">
+                  <path stroke="#000" stroke-linecap="round" stroke-width="2" d="m1 17 8-7.758L1 1"/>
+                </svg>
+              </button>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- <img src="./img/chevrolet/1.jpg" alt="фото автомобиля" width="864"> -->
         </div>
 
         <!-- Описание  -->
@@ -164,7 +204,8 @@
               <li>Комплектация RST</li>
               <li>3-й ряд сидений</li>
               <li>Отделка интерьера Перфорированная кожа черного цвета с красной прострочкой</li>
-              <li>Сиденья второго ряда раздельные (капитанские) (Механическая регулировка угла наклона спинки и продольная
+              <li>Сиденья второго ряда раздельные (капитанские) (Механическая регулировка угла наклона спинки и
+                продольная
                 регулировка, Электропривод складывания, с откидными подлокотниками</li>
               <li>Мультимедиа: Развлекательная система для пассажиров второго ряда</li>
               <li>Два комплекта 2-х канальных цифровых беспроводных наушников</li>
@@ -238,7 +279,8 @@
 
     </div>
   </footer>
-
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="./js/scripts.js"></script>
 </body>
 

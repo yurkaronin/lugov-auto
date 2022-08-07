@@ -1,6 +1,8 @@
 // глобальные переменные
 let menuButton = document.querySelector('.js-menu-btn');
 let filterButton = document.querySelector('.js-filter-btn');
+// let swiperPersonalCard = document.querySelector('.swiper-personal-card');
+
 
 // функция подключения скриптов
 function include(url) {
@@ -12,3 +14,7 @@ function include(url) {
 // подключаем скрипты
 include("./js/parts/menu-button.js");
 include("./js/parts/filter-button.js");
+
+include("./js/parts/slider-personal.js");
+
+
