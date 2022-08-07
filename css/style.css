@@ -1266,6 +1266,9 @@ input[type=checkbox]:checked + label::before {
 .full-card__desc-text li {
   margin-bottom: 1.5%;
 }
+.full-card__slider {
+  margin-bottom: 32px;
+}
 .full-card__slider-nav {
   position: absolute;
   display: flex;
@@ -1313,12 +1316,33 @@ input[type=checkbox]:checked + label::before {
 }
 .full-card .swiper-slide {
   border-radius: 4px;
+  overflow: hidden;
 }
 .full-card .swiper-slide img {
-  border-radius: 4px;
-  overflow: hidden;
   display: block;
   width: 100%;
+}
+.full-card__gallery ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.full-card__gallery a {
+  width: 96px;
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.full-card__gallery a img {
+  display: block;
+}
+.full-card__gallery a:hover {
+  border: 1px solid;
+  border-color: var(--col-accent);
 }
 
 .footer {
