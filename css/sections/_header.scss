@@ -1,8 +1,10 @@
 .header {
   background-color: var(--col--black);
   color: var(--col--wh);
-  // padding-top: 16px;
-  // padding-bottom: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 55;
+
 
   &__container {
     display: flex;
@@ -204,6 +206,7 @@
     &__container {
       padding-right: 0;
     }
+
     &__logo {
       width: 120px;
     }
