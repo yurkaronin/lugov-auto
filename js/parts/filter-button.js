@@ -8,4 +8,6 @@ if(filterButton) {
   }
 }
 
+const modalFilter = document.querySelector('#modal-filter');
+// console.log(modalFilter.setAttribute('aria-hidden', 'true'));
 

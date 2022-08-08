@@ -24,6 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     disableScroll: true,
     disableFocus: true,
     awaitOpenAnimation: true,
-    awaitCloseAnimation: true
+    awaitCloseAnimation: true,
   })
 });
