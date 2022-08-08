@@ -16,7 +16,7 @@ include("./js/parts/menu-button.js");
 include("./js/parts/filter-button.js");
 
 // скрипт инициализации слайдера для детальной карточки авто
-if(document.querySelector('.swiper-personal-card')) {
+if (document.querySelector('.swiper-personal-card')) {
   let miniature = document.querySelectorAll('.full-card__gallery a');
 
   let swiperPersonalCard = new Swiper(".swiper-personal-card", {
@@ -32,10 +32,11 @@ if(document.querySelector('.swiper-personal-card')) {
 
   for (let i = 0; i < miniature.length; i++) {
     miniature[i].setAttribute('data-index', i);
-    console.log(miniature[i]);
+    // console.log(miniature[i]);
     miniature[i].addEventListener('click', (event) => {
       event.preventDefault();
-      swiperPersonalCard.slideTo(event.target.getAttribute('data-index'))
+      swiperPersonalCard.slideTo(event.target.getAttribute('data-index'));
+      // console.log(event.target);
     })
   }
 };
@@ -45,9 +46,9 @@ if (document.querySelector('.card-item-slider')) {
   const sliderCards = document.querySelectorAll('.card-item');
 
 
-  for(let i = 0; i < sliderCards.length; i++) {
+  for (let i = 0; i < sliderCards.length; i++) {
     if (sliderCards[i].querySelector('.card-item-slider__container')) {
-      sliderCards[i].querySelector('.card-item-slider__container').classList.add( `card-gallery-${i}`);
+      sliderCards[i].querySelector('.card-item-slider__container').classList.add(`card-gallery-${i}`);
       let swiperTest = new Swiper(`.card-item-slider__container.card-gallery-${i}`, {});
 
       const arrItemNav = sliderCards[i].querySelectorAll('.card-item-navigation__item');

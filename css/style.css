@@ -1400,6 +1400,7 @@ input[type=checkbox]:checked + label::before {
 }
 .full-card__gallery a img {
   display: block;
+  pointer-events: none;
 }
 .full-card__gallery a:hover {
   border: 1px solid;

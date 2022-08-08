@@ -228,8 +228,6 @@
       flex-wrap: wrap;
     }
 
-    li {}
-
     a {
       width: 96px;
       display: flex;
@@ -239,6 +237,7 @@
 
       img {
         display: block;
+        pointer-events: none;
       }
 
       &:hover {
