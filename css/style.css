@@ -936,6 +936,7 @@ input[type=checkbox]:checked + label::before {
 }
 .main__card-list .card-item {
   width: calc(33.3333333333% - 22px);
+  width: 352px;
 }
 @media (max-width: 1600px) {
   .main__filter {
@@ -948,6 +949,7 @@ input[type=checkbox]:checked + label::before {
 @media (max-width: 1200px) {
   .main__card-list .card-item {
     width: calc(50% - 16px);
+    width: 352px;
   }
 }
 @media (max-width: 960px) {
@@ -1375,6 +1377,9 @@ input[type=checkbox]:checked + label::before {
   }
   .full-card__gallery ul {
     gap: 30px;
+  }
+  .full-card__gallery a img {
+    pointer-events: none;
   }
 }
 @media (max-width: 960px) {

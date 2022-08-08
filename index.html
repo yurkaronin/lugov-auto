@@ -11,6 +11,10 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="./css/normalize.min.css">
+
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="./css/style.css">
   </head>
 
@@ -316,7 +320,45 @@
             <article class="card-item">
               <div class="card-item__header">
                 <!-- тут будет слайдер  -->
-                <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+                <!-- <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy"> -->
+                <div class="card-item-slider">
+                  <div class="card-item-slider__container swiper">
+                    <div class="card-item-slider__wrapper swiper-wrapper">
+                      <div class="card-item-slider__slide swiper-slide">
+                        <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+                      </div>
+                      <div class="card-item-slider__slide swiper-slide">
+                        <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+                      </div>
+                      <div class="card-item-slider__slide swiper-slide">
+                        <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+                      </div>
+                      <div class="card-item-slider__slide swiper-slide">
+                        <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+                      </div>
+                      <div class="card-item-slider__slide swiper-slide">
+                        <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="card-item-navigation">
+                  <li class="card-item-navigation__item">
+                    <div class="card-item-navigation__line"></div>
+                  </li>
+                  <li class="card-item-navigation__item">
+                    <div class="card-item-navigation__line"></div>
+                  </li>
+                  <li class="card-item-navigation__item">
+                    <div class="card-item-navigation__line"></div>
+                  </li>
+                  <li class="card-item-navigation__item">
+                    <div class="card-item-navigation__line"></div>
+                  </li>
+                  <li class="card-item-navigation__item">
+                    <div class="card-item-navigation__line"></div>
+                  </li>
+                </ul>
               </div>
 
               <div class="card-item__body">
@@ -344,11 +386,51 @@
               <!-- <span class="card-item__label">Спецпредложение</span> -->
 
             </article>
+
+
             <!-- карточка автомобиля  -->
             <article class="card-item">
               <div class="card-item__header">
                 <!-- тут будет слайдер  -->
-                <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+                <!-- <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy"> -->
+                <div class="card-item-slider">
+                  <div class="card-item-slider__container swiper">
+                    <div class="card-item-slider__wrapper swiper-wrapper">
+                      <div class="card-item-slider__slide swiper-slide">
+                        <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+                      </div>
+                      <div class="card-item-slider__slide swiper-slide">
+                        <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+                      </div>
+                      <div class="card-item-slider__slide swiper-slide">
+                        <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+                      </div>
+                      <div class="card-item-slider__slide swiper-slide">
+                        <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+                      </div>
+                      <div class="card-item-slider__slide swiper-slide">
+                        <img src="./img/card/1.jpg" alt="авто" width="352" loading="lazy">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="card-item-navigation">
+                  <li class="card-item-navigation__item" data-number="">
+                    <div class="card-item-navigation__line"></div>
+                  </li>
+                  <li class="card-item-navigation__item" data-number="">
+                    <div class="card-item-navigation__line"></div>
+                  </li>
+                  <li class="card-item-navigation__item" data-number="">
+                    <div class="card-item-navigation__line"></div>
+                  </li>
+                  <li class="card-item-navigation__item" data-number="">
+                    <div class="card-item-navigation__line"></div>
+                  </li>
+                  <li class="card-item-navigation__item" data-number="">
+                    <div class="card-item-navigation__line"></div>
+                  </li>
+                </ul>
               </div>
 
               <div class="card-item__body">
@@ -799,7 +881,8 @@
 
       </div>
     </footer>
-
+    <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./js/scripts.js"></script>
   </body>
 

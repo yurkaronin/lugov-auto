@@ -53,6 +53,7 @@
 
     .card-item {
       width: calc((100% / 3) - 22px);
+      width: 352px;
     }
   }
 
@@ -70,6 +71,7 @@
     &__card-list {
       .card-item {
         width: calc(50% - 16px);
+        width: 352px;
       }
     }
   }

@@ -277,6 +277,10 @@
       ul {
         gap: 30px;
       }
+
+      a img {
+        pointer-events: none;
+      }
     }
 
   }
