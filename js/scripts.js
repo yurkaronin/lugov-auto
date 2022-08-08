@@ -14,3 +14,16 @@ function include(url) {
 include("./js/parts/menu-button.js");
 include("./js/parts/filter-button.js");
 include("./js/parts/sliders.js");
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  MicroModal.init({
+    openTrigger: 'data-custom-open',
+    closeTrigger: 'data-custom-close',
+    disableScroll: true,
+    disableFocus: true,
+    awaitOpenAnimation: true,
+    awaitCloseAnimation: true
+  })
+});
