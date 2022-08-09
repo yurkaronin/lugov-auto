@@ -52,3 +52,77 @@ if (document.querySelector('.card-item-slider')) {
     }
   };
 };
+
+// слайдер похожих товаров
+if (document.querySelector('.js-type-products-slider')) {
+  var typeProducts = new Swiper(".js-type-products-slider", {
+    slidesPerView: 4,
+    // slidesPerView: "auto",
+    // centeredSlides: true,
+    // autoHeight: true,
+    grabCursor: true,
+    // loop: true,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.type-products .swiper-button-next',
+      prevEl: '.type-products .swiper-button-prev',
+    },
+
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 16,
+
+      },
+      // when window width is >= 750px
+      560: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+      },
+      750: {
+        slidesPerView: 3,
+        spaceBetween: 16,
+      },
+      // when window width is >= 768px
+      960: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },
+      // when window width is >= 1350px
+      1350: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+      },
+    },
+
+  });
+}
+
+
+
+
+
+// const typeProducts = new Swiper('.js-type-products-slider', {
+//   // Optional parameters
+//   direction: 'vertical',
+//   loop: true,
+//   slidesPerView: 6,
+//   spaceBetween: 32,
+
+//   // If we need pagination
+//   pagination: {
+//     el: '.type-products  .swiper-pagination',
+//   },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.type-products .swiper-button-next',
+//     prevEl: '.type-products .swiper-button-prev',
+//   },
+
+//   // And if we need scrollbar
+//   scrollbar: {
+//     el: '.type-products .swiper-scrollbar',
+//   },
+// });

@@ -1472,7 +1472,7 @@ input[type=checkbox]:checked + .custom-form__politic::before {
 .full-card__slider-nav .swiper-button::after {
   display: none;
 }
-.full-card .swiper-pagination {
+.full-card .swiper-pagination--custom {
   top: initial;
   left: initial;
   right: 30px;
@@ -2097,6 +2097,63 @@ input[type=checkbox]:checked + .custom-form__politic::before {
     width: 40px;
     right: 20px;
     top: -20px;
+  }
+}
+.type-products {
+  padding: 48px 0 64px;
+}
+.type-products .main__title {
+  margin-bottom: 40px;
+}
+.type-products .swiper-slide--solo {
+  width: 352px;
+  width: 20%;
+}
+.type-products .swiper-button {
+  height: 48px;
+  width: 48px;
+  background: var(--col--wh);
+  border-radius: 4px;
+  border: none;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 30%;
+}
+.type-products .swiper-button:after {
+  display: none;
+}
+.type-products .swiper-button::before {
+  display: none;
+}
+.type-products .swiper-button-next {
+  right: 24px;
+}
+.type-products .swiper-button-prev {
+  left: 24px;
+}
+
+.type-products__navigations {
+  position: relative;
+}
+
+.type-products__slider {
+  position: relative;
+  overflow: hidden;
+}
+.type-products__slider .js-type-products-slider {
+  overflow: initial;
+  max-width: 1600px;
+  padding: 0 48px;
+}
+
+@media (max-width: 560px) {
+  .type-products {
+    padding-bottom: 20px;
+  }
+  .swiper-slide--solo {
+    width: 100%;
   }
 }
 .footer {
