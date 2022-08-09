@@ -1,0 +1,130 @@
+.cust-form__input-wrapper {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+
+}
+
+.custom-form__input {
+  max-width: 100%;
+  width: calc(50% - 16px);
+  height: 48px;
+  font-size: 16px;
+  line-height: 1;
+  color: #00000047;
+  padding: 16px;
+  border-radius: 4px;
+  border-width: 2px;
+  border-color: transparent;
+
+  &:active,
+  &:hover,
+  &:focus {
+    border-color: #00A5FF;
+    color: #000000;
+  }
+}
+
+.custom-form__wrapper {
+  margin-bottom: 32px;
+}
+
+.custom-form__politic {
+  font-size: 16px;
+  line-height: 40px;
+  color: #B7B7B7;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+
+  a {
+    color: #00A5FF;
+  }
+}
+
+.custom-form__label {
+  position: relative;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+}
+
+input[type=checkbox]+.custom-form__politic::before {
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url(../img/icons/checkbox-off.svg);
+}
+
+input[type=checkbox]:checked+.custom-form__politic::before {
+  background-image: url(../img/icons/checkbox-on.svg) !important;
+}
+
+.custom-form__button {
+  width: 100%;
+  height: 48px;
+}
+
+#modal-filter {
+  .custom-filter--mob {
+    display: block;
+    margin-top: 120px;
+    max-width: 100% !important;
+    overflow: auto;
+    margin: 0;
+
+  }
+
+  .modal__container {
+    max-width: 100% !important;
+    margin-top: 120px;
+    overflow: auto;
+    padding-bottom: 120px;
+  }
+
+  .modal__body {
+    padding-top: 0;
+  }
+
+  .modal__overlay {
+    background: transparent;
+  }
+}
+
+
+@media (max-width: 750px) {
+  .custom-form__input {
+    width: 100%;
+    height: 50px;
+  }
+
+  .custom-form__button {
+    height: 50px;
+  }
+
+  .custom-form__label {
+    display: initial;
+  }
+
+  .custom-form__politic {
+    display: initial;
+  }
+
+  input[type=checkbox]+.custom-form__politic::before {
+    top: -1px;
+  }
+
+  .custom-form__politic {
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .custom-form__label {
+    padding-left: 34px;
+  }
+
+}
