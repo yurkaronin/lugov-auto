@@ -2180,4 +2180,13 @@ input[type=checkbox]:checked + .custom-form__politic::before {
 }
 #modal-filter .modal__overlay {
   background: transparent;
+}
+
+.map {
+  width: 1024px;
+  height: 480px;
+}
+
+[class*=copyrights-pane] {
+  display: none !important;
 }/*# sourceMappingURL=style.css.map */
