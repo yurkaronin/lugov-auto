@@ -753,26 +753,6 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   height: 48px;
 }
 
-#modal-filter .custom-filter--mob {
-  display: block;
-  margin-top: 120px;
-  max-width: 100% !important;
-  overflow: auto;
-  margin: 0;
-}
-#modal-filter .modal__container {
-  max-width: 100% !important;
-  margin-top: 120px;
-  overflow: auto;
-  padding-bottom: 120px;
-}
-#modal-filter .modal__body {
-  padding-top: 0;
-}
-#modal-filter .modal__overlay {
-  background: transparent;
-}
-
 @media (max-width: 750px) {
   .custom-form__input {
     width: 100%;
@@ -2075,6 +2055,28 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   z-index: 99;
 }
 
+#modal-filter .modal__overlay {
+  margin-top: 120px;
+}
+#modal-filter .custom-filter--mob {
+  display: block;
+  max-width: 100% !important;
+  overflow: auto;
+  margin: 0;
+}
+#modal-filter .modal__container {
+  max-width: 100% !important;
+  overflow: auto;
+  margin-top: 0;
+  padding-bottom: 120px;
+}
+#modal-filter .modal__body {
+  padding-top: 0;
+}
+#modal-filter .modal__overlay {
+  background: transparent;
+}
+
 @media (max-width: 750px) {
   .modal__container {
     max-width: 355px;
@@ -2243,9 +2245,21 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   opacity: 1;
 }
 
-.js-mob-filter-show .custom-filter--mob {
-  display: block;
-  min-height: calc(100vh - 72px);
-  border-top: 1px solid;
-  border-color: var(--col-bg);
+.js-mob-filter-show {
+  /* .custom-filter--mob {
+    display: block;
+    min-height: calc(100vh - 72px);
+    border-top: 1px solid;
+    border-color: var(--col-bg);
+  } */
+}
+.js-mob-filter-show .header__btn--filter svg {
+  opacity: 0;
+}
+.js-mob-filter-show .header__btn--filter .cross {
+  opacity: 1;
+}
+
+.mobile-menu__link * {
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */

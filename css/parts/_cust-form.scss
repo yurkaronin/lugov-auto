@@ -69,32 +69,6 @@ input[type=checkbox]:checked+.custom-form__politic::before {
   height: 48px;
 }
 
-#modal-filter {
-  .custom-filter--mob {
-    display: block;
-    margin-top: 120px;
-    max-width: 100% !important;
-    overflow: auto;
-    margin: 0;
-
-  }
-
-  .modal__container {
-    max-width: 100% !important;
-    margin-top: 120px;
-    overflow: auto;
-    padding-bottom: 120px;
-  }
-
-  .modal__body {
-    padding-top: 0;
-  }
-
-  .modal__overlay {
-    background: transparent;
-  }
-}
-
 
 @media (max-width: 750px) {
   .custom-form__input {

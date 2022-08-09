@@ -346,6 +346,34 @@
   z-index: 99;
 }
 
+#modal-filter {
+  .modal__overlay {
+    margin-top: 120px;
+  }
+  .custom-filter--mob {
+    display: block;
+    max-width: 100% !important;
+    overflow: auto;
+    margin: 0;
+
+  }
+
+  .modal__container {
+    max-width: 100% !important;
+    overflow: auto;
+    margin-top: 0;
+    padding-bottom: 120px;
+  }
+
+  .modal__body {
+    padding-top: 0;
+  }
+
+  .modal__overlay {
+    background: transparent;
+  }
+}
+
 @media (max-width: 750px) {
   .modal__container {
     max-width: 355px;

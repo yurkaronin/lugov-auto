@@ -98,31 +98,3 @@ if (document.querySelector('.js-type-products-slider')) {
 
   });
 }
-
-
-
-
-
-// const typeProducts = new Swiper('.js-type-products-slider', {
-//   // Optional parameters
-//   direction: 'vertical',
-//   loop: true,
-//   slidesPerView: 6,
-//   spaceBetween: 32,
-
-//   // If we need pagination
-//   pagination: {
-//     el: '.type-products  .swiper-pagination',
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.type-products .swiper-button-next',
-//     prevEl: '.type-products .swiper-button-prev',
-//   },
-
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: '.type-products .swiper-scrollbar',
-//   },
-// });
