@@ -1,7 +1,12 @@
 // показ мобильного меню
 .js-mob-menu-show {
+  overflow: hidden;
   .mobile-menu--nav {
     display: block;
+  }
+
+  .mobile-menu--filter {
+    display: none;
   }
 
   .js-menu-btn {
@@ -23,6 +28,7 @@
     border-color: var(--col-bg);
   } */
   .header__btn--filter {
+    background-color: var(--col-accent);
     svg {
       opacity: 0;
     }

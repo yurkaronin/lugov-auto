@@ -312,7 +312,7 @@
 
 .modal__header {
   border-bottom: 1px solid;
-  border-color: var(--col--gray);
+  border-color: rgba(255, 255, 255, .2);
 }
 
 .modal__body {
@@ -350,6 +350,7 @@
   .modal__overlay {
     margin-top: 120px;
   }
+
   .custom-filter--mob {
     display: block;
     max-width: 100% !important;
@@ -371,6 +372,18 @@
 
   .modal__overlay {
     background: transparent;
+  }
+}
+
+@media (max-width: 960px) {
+  #modal-filter .modal__overlay {
+    margin-top: 144px;
+  }
+  #modal-filter .custom-filter--mob {
+    padding: 0;
+  }
+  #modal-filter .modal__container {
+    padding-top: 44px;
   }
 }
 
@@ -401,6 +414,10 @@
     width: 40px;
     right: 20px;
     top: -20px;
+  }
+
+  #modal-filter .modal__overlay {
+    margin-top: 120px;
   }
 
 }

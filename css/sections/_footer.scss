@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     border-top: 1px solid;
-    border-color: var(--col--gray);
+    border-color: #333333;
     gap: 6px 32px;
     padding: 31px 0 30px;
     flex-wrap: wrap;
@@ -44,11 +44,11 @@
       }
 
       &:hover {
-        color: var(--col-accent-2);
+        color: #ffffff;
 
         &:after {
 
-          background-color: var(--col-accent-2);
+          background-color: #ffffff;
         }
       }
     }

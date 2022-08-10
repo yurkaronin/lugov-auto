@@ -1,12 +1,14 @@
 .card-item {
-  // max-width: 352px;
   background-color: var(--col-bg);
   color: var(--col-text);
-  border-radius: 4px;
   overflow: hidden;
-  border: 1px solid;
-  border-color: var(--col--gray);
   position: relative;
+  border-radius: 4px;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #000000;
+  }
 
 
   &__header {
@@ -15,7 +17,28 @@
     img {
       display: block;
       width: 100%;
+      border-radius: 4px 4px 0 0;
+      overflow: hidden;
     }
+  }
+
+  &__photo-summ {
+    position: absolute;
+    z-index: 99;
+    pointer-events: none;
+    bottom: 16px;
+    right: 16px;
+    background: #000000c2;
+    border-radius: 4px;
+    min-width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
   }
 
   &__body {
@@ -23,6 +46,9 @@
     padding: 14px 23px 17px;
     font-weight: 400;
     font-size: 14px;
+    border: 1px solid;
+    border-color: #333333;
+    border-radius: 0 0 4px 4px;
 
     p {
       margin: 0;
@@ -62,11 +88,27 @@
     text-decoration: none;
     margin-bottom: 5px;
     display: block;
+    position: relative;
+    max-width: max-content;
+
+    &:hover {
+      &:after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: var(--col-accent);
+        display: block;
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        transition: all 0.3s;
+      }
+    }
   }
 
   &__footer {
     border-top: 1px solid;
-    border-color: var(--col--gray);
+    border-color: #333333;
     padding-top: 14px;
     color: var(--col-text);
 
@@ -96,6 +138,7 @@
     padding: 10px 16px;
     transition: all 0.3s;
     border-radius: 4px;
+    text-decoration: none;
 
     &:hover {
       background-color: var(--col-accent-2);
@@ -129,6 +172,7 @@
 
     &__body {
       padding: 10px 20px 22px;
+      border: none;
     }
 
     &__header {
@@ -153,7 +197,7 @@
     &__footer {
       border: none;
       display: flex;
-      gap: 16px;
+      gap: 15px;
 
     }
 
@@ -224,15 +268,21 @@
   bottom: 7px;
   left: 0;
   transition: all 0.3s;
+  opacity: 0;
+}
+
+.card-item:hover .card-item-navigation__line {
+  opacity: 1;
 }
 
 .card-item-navigation__item:hover {
   .card-item-navigation__line {
     background-color: #00A5FF;
+    // opacity: 1;
   }
 }
 
 .card-item__label {
   z-index: 22;
-  border-radius: 0 0 4px 4px;
+  border-radius: 4px 0 4px 0;
 }

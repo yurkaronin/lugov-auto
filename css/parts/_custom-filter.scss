@@ -40,6 +40,10 @@
     padding-left: 40px;
     display: flex;
     align-items: center;
+    transition: all 0.3s;
+    &:hover {
+      color: var(--col--wh);
+    }
   }
 
   &__range {

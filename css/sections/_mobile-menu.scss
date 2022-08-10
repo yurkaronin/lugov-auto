@@ -40,7 +40,7 @@
       justify-content: space-between;
       background-color: var(--col-bg);
       border-top: 1px solid;
-      border-color: var(--col--gray);
+      border-color: rgba(255, 255, 255, .2);
 
       svg {
         transition: all 0.3s;
@@ -87,4 +87,14 @@
   }
 
 
+}
+
+.mobile-menu__link--active {
+  color: var(--col--wh);
+  background-color: var(--col-accent);
+  border-color: transparent;
+}
+.mobile-menu__link--active svg {
+  transform: rotate(90deg);
+  transform-origin: center center;
 }
