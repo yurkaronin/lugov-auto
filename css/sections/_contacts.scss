@@ -41,6 +41,10 @@
     // width: 480px;
     flex-grow: 2;
     line-height: 2;
+
+    a {
+      font-weight: 700;
+    }
   }
 
   &__credit {
@@ -51,18 +55,20 @@
 
     a {
       color: var(--col--wh);
+      font-weight: 700;
     }
   }
 
   &__worktime {
     font-size: 16px;
     color: var(--col--wh);
-    // width: 480px;
     flex-grow: 2;
     line-height: 2;
+    font-weight: 700;
 
     span {
       color: var(--col-text);
+      font-weight: 400;
     }
   }
 

@@ -3,6 +3,7 @@ if (document.querySelector('.swiper-personal-card')) {
   let miniature = document.querySelectorAll('.full-card__gallery a');
 
   let swiperPersonalCard = new Swiper(".swiper-personal-card", {
+    loop: true,
     pagination: {
       el: ".swiper-personal-card .swiper-pagination",
       type: "fraction",
@@ -17,6 +18,13 @@ if (document.querySelector('.swiper-personal-card')) {
     miniature[i].setAttribute('data-index', i);
     miniature[i].addEventListener('click', (event) => {
       event.preventDefault();
+
+      document.querySelectorAll('.full-card__gallery a').forEach(elem => {
+        elem.classList.remove('active');
+      });
+
+      event.target.classList.add('active');
+
       swiperPersonalCard.slideTo(event.target.getAttribute('data-index'));
     })
   }
@@ -54,47 +62,60 @@ if (document.querySelector('.card-item-slider')) {
 };
 
 // слайдер похожих товаров
-if (document.querySelector('.js-type-products-slider')) {
-  var typeProducts = new Swiper(".js-type-products-slider", {
-    slidesPerView: 4,
-    // slidesPerView: "auto",
-    // centeredSlides: true,
-    // autoHeight: true,
-    grabCursor: true,
-    // loop: true,
-    // Navigation arrows
-    navigation: {
-      nextEl: '.type-products .swiper-button-next',
-      prevEl: '.type-products .swiper-button-prev',
-    },
-
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 16,
-
-      },
-      // when window width is >= 750px
-      560: {
-        slidesPerView: 2,
-        spaceBetween: 16,
-      },
-      750: {
-        slidesPerView: 3,
-        spaceBetween: 16,
-      },
-      // when window width is >= 768px
-      960: {
-        slidesPerView: 3,
-        spaceBetween: 32,
-      },
-      // when window width is >= 1350px
-      1350: {
+  if (document.documentElement.clientWidth > 560) {
+    if (AllProductSlider) {
+      var typeProducts = new Swiper(".js-type-products-slider", {
         slidesPerView: 4,
-        spaceBetween: 32,
-      },
-    },
+        // slidesPerView: "auto",
+        // centeredSlides: true,
+        // autoHeight: true,
+        grabCursor: true,
+        loop: true,
+        // Navigation arrows
+        navigation: {
+          nextEl: '.type-products .swiper-button-next',
+          prevEl: '.type-products .swiper-button-prev',
+        },
 
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+
+          },
+          // when window width is >= 750px
+          560: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+          },
+          // when window width is >= 768px
+          960: {
+            slidesPerView: 3,
+            spaceBetween: 32,
+          },
+          // when window width is >= 1350px
+          1350: {
+            slidesPerView: 4,
+            spaceBetween: 32,
+          },
+        }
+      })
+    } else {
+      AllProductSlider.destroy();
+    }
+
+
+  }
+
+// Вынужденные меры для прохождения проверки Дизайнера
+if (AllProductSlider) {
+  window.addEventListener('resize', () => {
+    location.reload();
   });
 }
+

@@ -3,6 +3,7 @@ let menuButton = document.querySelector('.js-menu-btn');
 let filterButton = document.querySelector('.js-filter-btn');
 let modalFilter = document.querySelector('#modal-filter');
 let mobileFilterBtn = document.querySelector('.js-mod-filter-show');
+let AllProductSlider = document.querySelector('.js-type-products-slider');
 
 // функция подключения скриптов
 function include(url) {

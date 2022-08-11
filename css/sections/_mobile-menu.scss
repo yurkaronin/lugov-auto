@@ -41,6 +41,7 @@
       background-color: var(--col-bg);
       border-top: 1px solid;
       border-color: rgba(255, 255, 255, .2);
+      background-color: var(--col--black);
 
       svg {
         transition: all 0.3s;
@@ -64,6 +65,8 @@
 
     &--filter {
       display: block;
+      position: absolute;
+      width: 100%;
 
       .mobile-menu__link {
         color: var(--col--wh);

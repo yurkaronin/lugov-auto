@@ -70,6 +70,7 @@
     &__container {
       gap: 20px;
     }
+
     &__menu {
       width: 100%;
       max-width: 100%;
@@ -78,11 +79,23 @@
   }
 
   @media (max-width: 750px) {
+
     &__container {
       gap: 23px;
     }
+
     &__container {
       padding: 23px 0 32px;
+    }
+
+  }
+
+  @media (max-width: 560px) {
+    border-top: 1px solid;
+    border-color: #333333;
+
+    .footer__container {
+      border: none;
     }
   }
 }

@@ -742,7 +742,7 @@ input[type=checkbox]:checked + label::before {
   display: flex;
   gap: 32px;
   flex-wrap: wrap;
-  margin-bottom: 22px;
+  margin-bottom: 32px;
 }
 
 .custom-form__input {
@@ -768,7 +768,7 @@ input[type=checkbox]:checked + label::before {
 
 .custom-form__politic {
   font-size: 16px;
-  line-height: 40px;
+  line-height: 1;
   color: #B7B7B7;
   font-weight: 400;
   display: flex;
@@ -1076,6 +1076,7 @@ input[type=checkbox]:checked + .custom-form__politic::before {
     background-color: var(--col-bg);
     border-top: 1px solid;
     border-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--col--black);
   }
   .mobile-menu__link svg {
     transition: all 0.3s;
@@ -1094,6 +1095,8 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   }
   .mobile-menu--filter {
     display: block;
+    position: absolute;
+    width: 100%;
   }
   .mobile-menu--filter .mobile-menu__link {
     color: var(--col--wh);
@@ -1163,6 +1166,9 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   border-radius: 4px;
   text-decoration: none;
 }
+.main__title .label:hover {
+  background-color: var(--col-accent-2);
+}
 .main__card-list {
   padding-top: 38px;
   flex-wrap: wrap;
@@ -1198,9 +1204,15 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   }
 }
 @media (max-width: 750px) {
+  .main {
+    margin-top: 54px;
+  }
   .main__card-list {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
+  }
+  .main__title .label {
+    bottom: -12px;
   }
 }
 @media (max-width: 560px) {
@@ -1293,6 +1305,9 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   flex-grow: 2;
   line-height: 2;
 }
+.contacts__address a {
+  font-weight: 700;
+}
 .contacts__credit {
   font-size: 16px;
   color: var(--col-text);
@@ -1301,15 +1316,18 @@ input[type=checkbox]:checked + .custom-form__politic::before {
 }
 .contacts__credit a {
   color: var(--col--wh);
+  font-weight: 700;
 }
 .contacts__worktime {
   font-size: 16px;
   color: var(--col--wh);
   flex-grow: 2;
   line-height: 2;
+  font-weight: 700;
 }
 .contacts__worktime span {
   color: var(--col-text);
+  font-weight: 400;
 }
 .contacts__button {
   max-width: 224px;
@@ -1377,6 +1395,7 @@ input[type=checkbox]:checked + .custom-form__politic::before {
 .full-card {
   color: var(--col--wh);
   padding-top: 0;
+  margin-top: 0;
 }
 .full-card__grid {
   display: grid;
@@ -1526,12 +1545,25 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s;
 }
 .full-card__slider-nav .swiper-button svg {
   pointer-events: none;
+  transition: all 0.3s;
+}
+.full-card__slider-nav .swiper-button svg path {
+  transition: all 0.3s;
+  stroke: var(--col--black);
 }
 .full-card__slider-nav .swiper-button::after {
   display: none;
+}
+.full-card__slider-nav .swiper-button:hover {
+  background-color: var(--col-accent-2);
+  border-color: var(--col-accent-2);
+}
+.full-card__slider-nav .swiper-button:hover svg path {
+  stroke: var(--col--wh);
 }
 .full-card .swiper-pagination--custom {
   top: initial;
@@ -1578,6 +1610,10 @@ input[type=checkbox]:checked + .custom-form__politic::before {
 .full-card__gallery a img {
   display: block;
   pointer-events: none;
+}
+.full-card__gallery a.active {
+  border: 1px solid;
+  border-color: var(--col-accent);
 }
 .full-card__gallery a:hover {
   border: 1px solid;
@@ -1631,14 +1667,14 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   .full-card__title {
     grid-column-start: initial;
     grid-column-end: initial;
-    padding-left: 40px;
-    padding-right: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
   }
   .full-card__title .title {
     margin-bottom: 30px;
   }
   .full-card__title .label {
-    left: 40px;
+    left: 0;
   }
   .full-card__details {
     padding-left: 40px;
@@ -1722,6 +1758,9 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   .full-card__features-list li span:last-child {
     width: 330px;
   }
+  .full-card .swiper-slide {
+    border-radius: 0;
+  }
 }
 @media (max-width: 750px) {
   .full-card__slider .swiper-personal-card {
@@ -1739,11 +1778,10 @@ input[type=checkbox]:checked + .custom-form__politic::before {
     padding-right: 20px;
   }
   .full-card__title {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .full-card__title .label {
-    left: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 1px solid;
+    border-color: var(--col--gray);
   }
   .full-card__slider-nav {
     bottom: 22px;
@@ -1784,6 +1822,14 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   }
   .full-card__features-list li span:first-child {
     width: 168px;
+  }
+  .full-card__desc-text li {
+    font-size: 14px;
+  }
+}
+@media (max-width: 560px) {
+  .full-card {
+    padding-bottom: 0;
   }
 }
 
@@ -2012,7 +2058,7 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   line-height: 130%;
   color: var(--color11);
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 32px;
 }
 .modal__close {
   position: absolute;
@@ -2098,7 +2144,7 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   line-height: 24px;
   color: #B7B7B7;
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .modal__header {
@@ -2107,7 +2153,7 @@ input[type=checkbox]:checked + .custom-form__politic::before {
 }
 
 .modal__body {
-  padding: 40px 0 0;
+  padding: 32px 0 0;
 }
 
 .modal__close {
@@ -2122,9 +2168,13 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   opacity: 1;
   right: 40px;
   top: -24px;
+  transition: all 0.3s;
 }
 .modal__close svg {
   pointer-events: none;
+}
+.modal__close:hover {
+  background: var(--col-accent-2);
 }
 
 .modal__container {
@@ -2178,13 +2228,12 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   }
   .modal__subtitle {
     font-size: 14px;
-    margin-bottom: 31px;
   }
   .modal__body {
     padding: 29px 0 0;
   }
   .modal__container {
-    padding: 24px 20px 30px;
+    padding: 24px 19px 30px;
   }
   .modal__close {
     height: 40px;
@@ -2197,7 +2246,7 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   }
 }
 .type-products {
-  padding: 48px 0 64px;
+  padding: 48px 0 0;
 }
 .type-products .main__title {
   margin-bottom: 40px;
@@ -2217,6 +2266,7 @@ input[type=checkbox]:checked + .custom-form__politic::before {
   align-items: center;
   justify-content: center;
   top: 30%;
+  transition: all 0.3s;
 }
 .type-products .swiper-button:after {
   display: none;
@@ -2229,6 +2279,27 @@ input[type=checkbox]:checked + .custom-form__politic::before {
 }
 .type-products .swiper-button-prev {
   left: 24px;
+}
+.type-products .swiper-button:hover {
+  background-color: var(--col-accent-2);
+  border-color: var(--col-accent-2);
+}
+.type-products .swiper-button:hover svg path {
+  stroke: #ffffff;
+}
+@media (max-width: 960px) {
+  .type-products__wrapper {
+    padding: 0 40px !important;
+  }
+}
+@media (max-width: 750px) {
+  .type-products__wrapper {
+    padding: 0 20px !important;
+  }
+}
+
+.card-item--solo .card-item-slider__slide {
+  width: 100% !important;
 }
 
 .type-products__navigations {
@@ -2246,13 +2317,30 @@ input[type=checkbox]:checked + .custom-form__politic::before {
 }
 
 @media (max-width: 560px) {
-  .type-products {
-    padding-bottom: 20px;
-  }
-  .swiper-slide--solo {
-    width: 100%;
+  .type-products .main__title {
+    padding: 0;
   }
 }
+@media (max-width: 560px) {
+  .type-products {
+    padding-bottom: 0;
+  }
+  .type-products .swiper-slide--solo {
+    width: 100%;
+  }
+  .type-products .js-type-products-slider {
+    padding: 0;
+  }
+  .type-products .swiper-wrapper {
+    gap: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .type-products .swiper-button {
+    display: none;
+  }
+}
+
 .footer {
   margin-top: auto;
   background-color: var(--col-bg);
@@ -2329,12 +2417,20 @@ input[type=checkbox]:checked + .custom-form__politic::before {
     padding: 23px 0 32px;
   }
 }
-
-.js-mob-menu-show {
-  overflow: hidden;
+@media (max-width: 560px) {
+  .footer {
+    border-top: 1px solid;
+    border-color: #333333;
+  }
+  .footer .footer__container {
+    border: none;
+  }
 }
+
 .js-mob-menu-show .mobile-menu--nav {
   display: block;
+  position: absolute;
+  width: 100%;
 }
 .js-mob-menu-show .mobile-menu--filter {
   display: none;

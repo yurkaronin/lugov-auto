@@ -8,6 +8,7 @@ if (filterButton) {
     } else {
       document.body.classList.add('js-mob-filter-show');
       MicroModal.show('modal-filter');
+      document.body.classList.remove('js-mob-menu-show');
     }
   });
 

@@ -1,8 +1,10 @@
 // показ мобильного меню
 .js-mob-menu-show {
-  overflow: hidden;
+  // overflow: hidden;
   .mobile-menu--nav {
     display: block;
+    position: absolute;
+    width: 100%;
   }
 
   .mobile-menu--filter {

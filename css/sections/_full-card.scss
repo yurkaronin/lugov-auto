@@ -1,10 +1,10 @@
 .full-card {
   color: var(--col--wh);
   padding-top: 0;
+  margin-top: 0;
 
   &__grid {
     display: grid;
-    // grid-template-columns: 480px 864px;
     grid-template-columns: 32% 58%;
     justify-content: space-between;
     margin-top: 33px;
@@ -177,15 +177,33 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: all 0.3s;
 
       svg {
         pointer-events: none;
+        transition: all 0.3s;
+      }
+
+      svg path {
+        transition: all 0.3s;
+        stroke: var(--col--black);
       }
 
       &::after {
         display: none;
       }
+
+      &:hover {
+        background-color: var(--col-accent-2);
+        border-color: var(--col-accent-2);
+
+        svg path {
+          stroke: var(--col--wh);
+        }
+      }
     }
+
+
   }
 
   .swiper-pagination--custom {
@@ -238,6 +256,11 @@
       img {
         display: block;
         pointer-events: none;
+      }
+
+      &.active {
+        border: 1px solid;
+        border-color: var(--col-accent);
       }
 
       &:hover {
@@ -306,15 +329,15 @@
     &__title {
       grid-column-start: initial;
       grid-column-end: initial;
-      padding-left: 40px;
-      padding-right: 40px;
+      margin-left: 40px;
+      margin-right: 40px;
 
       .title {
         margin-bottom: 30px;
       }
 
       .label {
-        left: 40px;
+        left: 0;
       }
     }
 
@@ -419,6 +442,10 @@
       }
     }
 
+    .swiper-slide {
+      border-radius: 0;
+    }
+
   }
 
   @media (max-width: 750px) {
@@ -443,12 +470,10 @@
     }
 
     &__title {
-      padding-left: 20px;
-      padding-right: 20px;
-
-      .label {
-        left: 20px;
-      }
+      margin-left: 20px;
+      margin-right: 20px;
+      border-bottom: 1px solid;
+      border-color: var(--col--gray);
     }
 
     &__slider-nav {
@@ -483,26 +508,38 @@
         margin-bottom: 20px;
       }
     }
+
     &__price {
       border: none;
       padding-bottom: 0;
+
       .price-now {
         font-size: 21px;
         width: 142px;
 
       }
+
       .credit-price {
         width: initial;
         font-size: 14px;
 
       }
     }
+
     &__features-list {
       li span:first-child {
         width: 168px;
       }
     }
 
+    &__desc-text li {
+      font-size: 14px;
+    }
 
+
+  }
+
+  @media (max-width: 560px) {
+    padding-bottom: 0;
   }
 }

@@ -207,7 +207,7 @@
     line-height: 130%;
     color: var(--color11);
     margin: 0;
-    margin-bottom: 26px;
+    margin-bottom: 32px;
   }
 
   &__close {
@@ -307,7 +307,7 @@
   line-height: 24px;
   color: #B7B7B7;
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .modal__header {
@@ -316,7 +316,7 @@
 }
 
 .modal__body {
-  padding: 40px 0 0;
+  padding: 32px 0 0;
 }
 
 .modal__close {
@@ -331,9 +331,14 @@
   opacity: 1;
   right: 40px;
   top: -24px;
+  transition: all 0.3s;
 
   svg {
     pointer-events: none;
+  }
+
+  &:hover {
+    background: var(--col-accent-2);
   }
 }
 
@@ -398,7 +403,6 @@
 
   .modal__subtitle {
     font-size: 14px;
-    margin-bottom: 31px;
   }
 
   .modal__body {
@@ -406,7 +410,7 @@
   }
 
   .modal__container {
-    padding: 24px 20px 30px;
+    padding: 24px 19px 30px;
   }
 
   .modal__close {

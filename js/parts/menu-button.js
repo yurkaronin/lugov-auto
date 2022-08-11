@@ -3,5 +3,10 @@ menuButton.onclick = function () {
     document.body.classList.remove('js-mob-menu-show');
   } else {
     document.body.classList.add('js-mob-menu-show');
+    document.body.classList.remove('js-mob-filter-show');
+    if(filterButton) {
+      MicroModal.close('modal-filter');
+    }
+
   }
 }
