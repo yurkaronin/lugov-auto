@@ -30,13 +30,13 @@ if (document.querySelector('.js-map')) {
 
     map.geoObjects.add(placemarRkschool);
 
-      placemarRkschool.events
+      /* placemarRkschool.events
         .add('mouseenter', function (e) {
           e.get('target').options.set('iconImageHref', './geo-mark-2.svg');
         })
         .add('mouseleave', function (e) {
           e.get('target').options.set('iconImageHref', './geo-mark.svg');
-        });
+        }); */
   }
 
   ymaps.ready(init);
