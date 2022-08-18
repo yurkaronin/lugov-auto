@@ -83,9 +83,10 @@
 
 @media (max-width: 960px) {
   .new-mobile-filter {
-    position: initial;
+    position: relative;
     display: block;
     margin-bottom: 20px;
+    z-index: 99;
   }
 }
 @media (max-width: 750px) {
