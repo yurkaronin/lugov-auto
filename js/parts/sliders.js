@@ -105,8 +105,6 @@ if (document.querySelector('.card-item-slider')) {
           },
         }
       })
-    } else {
-      AllProductSlider.destroy();
     }
 
 

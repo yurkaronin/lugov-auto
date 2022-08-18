@@ -15,7 +15,9 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
+    <link rel="stylesheet" href="./css/choices.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/custom.css">
   </head>
 
   <body class="body-flex">
@@ -78,22 +80,6 @@
         <!-- end wrapper -->
       </div>
 
-      <!-- Мобильный фильтр автомобилей  -->
-      <div class="mobile-menu mobile-menu--filter">
-
-        <ul class="mobile-menu__list">
-          <li class="mobile-menu__item">
-            <a class="mobile-menu__link js-mod-filter-show" data-custom-open="modal-filter"><span>Фильтр автомобилей</span>
-
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 26" width="25">
-                <path fill="#fff" d="M0 12h25v2H0z" />
-                <path fill="#fff" d="M13.5.5v25h-2V.5z" />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-
 
       <!-- мобильное меню  -->
       <div class="mobile-menu mobile-menu--nav">
@@ -128,6 +114,117 @@
 
     <!-- основной контент  -->
     <main class="main">
+
+      <!-- Раскрывающийся мобильный фильтр автомобилей  -->
+      <div class="new-mobile-filter">
+        <div class="wrapper">
+        <form>
+          <!-- марки автомобилей  -->
+          <fieldset class="custom-filter__group">
+            <legend class="custom-filter__name">марки автомобилей</legend>
+
+            <select name="cars-brand" class="js-select-brand">
+              <option value="all-brand" selected>Все марки</option>
+
+              <option value="Porsche">Porsche</option>
+              <option value="Mercedes-Benz">Mercedes-Benz</option>
+              <option value="BMW">BMW</option>
+              <option value="Landrover">Landrover</option>
+              <option value="Audi">Audi</option>
+              <option value="Bentley">Bentley</option>
+              <option value="Toyota">Toyota</option>
+              <option value="Tesla">Tesla</option>
+              <option value="Lexus">Lexus</option>
+            </select>
+
+          </fieldset>
+
+          <!-- Цена  -->
+          <fieldset class="custom-filter__group js-hide-in-modal">
+            <legend class="custom-filter__name">Цена</legend>
+            <div class="custom-filter__range">
+              <input class="custom-filter__input" type="number" name="price-min" id="price-min" placeholder="от">
+              <input class="custom-filter__input" type="number" name="price-max" id="price-max" placeholder="до">
+            </div>
+          </fieldset>
+
+          <!-- год выпуска  -->
+          <fieldset class="custom-filter__group js-hide-in-modal">
+            <legend class="custom-filter__name">Год выпуска</legend>
+            <div class="custom-filter__range">
+              <input class="custom-filter__input" type="number" name="year-from" min="1900" max="2022"
+                placeholder="от">
+              <input class="custom-filter__input" type="number" name="year-to" min="1900" max="2022"
+                placeholder="до">
+            </div>
+          </fieldset>
+
+          <!-- тип кузова  -->
+          <fieldset class="custom-filter__group js-hide-in-modal">
+            <legend class="custom-filter__name">Тип кузова</legend>
+
+            <select name="cars-brand" class="js-select js-select-bodywork">
+              <option value="all-bodywork" selected>Любой тип</option>
+
+              <option value="Porsche">Porsche</option>
+              <option value="Внедорожник">Внедорожник</option>
+              <option value="Седан">Седан</option>
+              <option value="Минивэн">Минивэн</option>
+              <option value="Купе">Купе</option>
+              <option value="Пикап">Пикап</option>
+              <option value="Другой">Другой</option>
+            </select>
+
+            <!-- <div class="custom-filter__flex">
+              <input class="visually-hidden" type="checkbox" name="Внедорожник" id="bodywork-vezdehod"
+                value="Внедорожник">
+              <label class="custom-filter__label" for="bodywork-vezdehod">Внедорожник</label>
+
+              <input class="visually-hidden" type="checkbox" name="Седан" id="bodywork-Mercedes-sedan"
+                value="Седан">
+              <label class="custom-filter__label" for="bodywork-Mercedes-sedan">Седан</label>
+
+              <input class="visually-hidden" type="checkbox" name="Минивэн" id="bodywork-minivan" value="Минивэн">
+              <label class="custom-filter__label" for="bodywork-minivan">Минивэн</label>
+
+              <input class="visually-hidden" type="checkbox" name="Купе" id="bodywork-cupe" value="Купе">
+              <label class="custom-filter__label" for="bodywork-cupe">Купе</label>
+
+              <input class="visually-hidden" type="checkbox" name="Пикап" id="bodywork-pickup" value="Пикап">
+              <label class="custom-filter__label" for="bodywork-pickup">Пикап</label>
+
+              <input class="visually-hidden" type="checkbox" name="Другой" id="bodywork-other" value="Другой">
+              <label class="custom-filter__label" for="bodywork-other">Другой</label>
+            </div> -->
+          </fieldset>
+
+          <div class="custom-filter__buttons">
+            <button class="button" type="button">Применить</button>
+            <button class="button button--white js-hide-in-modal" type="reset">Сбросить фильтр</button>
+            <!-- новая кнопка  -->
+            <a href="#" class="button button--more-filter js-more-filter">
+              <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v2l6.4 7.38V16l3.2-3.333V9.38L16 2V0H0Z" fill="#00A5FF"/></svg>
+              <span>Все фильтры</span></a>
+          </div>
+
+
+
+        </form>
+      </div>
+
+        <!-- <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link js-mod-filter-show" data-custom-open="modal-filter"><span>Фильтр автомобилей</span>
+
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 26" width="25">
+                <path fill="#fff" d="M0 12h25v2H0z" />
+                <path fill="#fff" d="M13.5.5v25h-2V.5z" />
+              </svg>
+            </a>
+          </li>
+        </ul> -->
+
+      </div>
 
       <div class="wrapper main__flex">
         <!-- фильтр десктоп  -->
@@ -625,36 +722,21 @@
                 <!-- марки автомобилей  -->
                 <fieldset class="custom-filter__group">
                   <legend class="custom-filter__name">марки автомобилей</legend>
-                  <div class="custom-filter__flex">
-                    <input class="visually-hidden" type="checkbox" name="Porsche" id="brand-porsche" value="Porsche">
-                    <label class="custom-filter__label" for="brand-porsche">Porsche</label>
 
-                    <input class="visually-hidden" type="checkbox" name="Mercedes Benz" id="brand-Mercedes-Benz"
-                      value="Mercedes Benz">
-                    <label class="custom-filter__label" for="brand-Mercedes-Benz">Mercedes Benz</label>
+                  <select name="cars-brand" class="js-select js-select-brand-modal">
+                    <option value="all-brand" selected>Все марки</option>
 
-                    <input class="visually-hidden" type="checkbox" name="brand-BMW" id="brand-BMW" value="BMW">
-                    <label class="custom-filter__label" for="brand-BMW">BMW</label>
+                    <option value="Porsche">Porsche</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Landrover">Landrover</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Bentley">Bentley</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Tesla">Tesla</option>
+                    <option value="Lexus">Lexus</option>
+                  </select>
 
-                    <input class="visually-hidden" type="checkbox" name="Landrover" id="brand-Landrover"
-                      value="Landrover">
-                    <label class="custom-filter__label" for="brand-Landrover">Landrover</label>
-
-                    <input class="visually-hidden" type="checkbox" name="Audi" id="brand-Audi" value="Audi" checked>
-                    <label class="custom-filter__label" for="brand-Audi">Audi</label>
-
-                    <input class="visually-hidden" type="checkbox" name="Bentley" id="brand-Bentley" value="Bentley">
-                    <label class="custom-filter__label" for="brand-Bentley">Bentley</label>
-
-                    <input class="visually-hidden" type="checkbox" name="Toyota" id="brand-Toyota" value="Toyota">
-                    <label class="custom-filter__label" for="brand-Toyota">Toyota</label>
-
-                    <input class="visually-hidden" type="checkbox" name="Tesla" id="brand-Tesla" value="Tesla">
-                    <label class="custom-filter__label" for="brand-Tesla">Tesla</label>
-
-                    <input class="visually-hidden" type="checkbox" name="Lexus" id="brand-Lexus" value="Lexus">
-                    <label class="custom-filter__label" for="brand-Lexus">Lexus</label>
-                  </div>
                 </fieldset>
 
                 <!-- Цена  -->
@@ -680,7 +762,20 @@
                 <!-- тип кузова  -->
                 <fieldset class="custom-filter__group">
                   <legend class="custom-filter__name">Тип кузова</legend>
-                  <div class="custom-filter__flex">
+
+                  <select name="cars-brand" class="js-select js-select-bodywork-modal">
+                    <option value="all-bodywork" selected>Любой тип</option>
+
+                    <option value="Porsche">Porsche</option>
+                    <option value="Внедорожник">Внедорожник</option>
+                    <option value="Седан">Седан</option>
+                    <option value="Минивэн">Минивэн</option>
+                    <option value="Купе">Купе</option>
+                    <option value="Пикап">Пикап</option>
+                    <option value="Другой">Другой</option>
+                  </select>
+
+                  <!-- <div class="custom-filter__flex">
                     <input class="visually-hidden" type="checkbox" name="Внедорожник" id="bodywork-vezdehod"
                       value="Внедорожник">
                     <label class="custom-filter__label" for="bodywork-vezdehod">Внедорожник</label>
@@ -700,7 +795,7 @@
 
                     <input class="visually-hidden" type="checkbox" name="Другой" id="bodywork-other" value="Другой">
                     <label class="custom-filter__label" for="bodywork-other">Другой</label>
-                  </div>
+                  </div> -->
                 </fieldset>
 
                 <div class="custom-filter__buttons">
@@ -723,6 +818,7 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./js/micromodal.min.js"></script>
+    <script src="./js/choices.min.js"></script>
     <script src="./js/scripts.js"></script>
   </body>
 
