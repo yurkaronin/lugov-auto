@@ -81,6 +81,10 @@
   display: block;
 }
 
+.header {
+  z-index: 1000;
+}
+
 @media (max-width: 960px) {
   .new-mobile-filter {
     position: relative;
